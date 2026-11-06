@@ -1,0 +1,125 @@
+Materials and Methods
+
+Project scope
+- Goal: evaluate cross-targetability of influenza A PA endonuclease inhibitor chemotypes against the Andes orthohantavirus (ANDV) L-protein endonuclease, prioritize candidates with favorable developability/toxicity heuristics, and prepare systems for MD refinement.
+
+Targets and structural data
+- ANDV endonuclease: PDB 6Q99 (L-protein N-terminal endonuclease domain).
+- Influenza A PA endonuclease references: PDB 6FS6 and related PA structures (6FS8, 6FS9, etc.).
+- Additional pocket-comparator structures were fetched for pocket similarity analysis (pocket_similarity/candidates/*, e.g., 2ZNL, 4IUJ, 8Y7M, 8P1N, 5IZE, 6QWL).
+
+Protein preparation
+- PlayMolecule ProteinPrepare was used at pH 7.2 for both targets (scripts/submit_prep_and_pockets.py).
+  • Tasks include: addition of missing hydrogens, optimization of hydrogen-bonding network, standardization of residue names, and pKa-guided protonation states (see receptors/*/details.csv).
+  • For 6FS6, the co-crystallized ligand E4Z was removed to create an apo receptor for docking (scripts/strip_residue_from_pdb.py), yielding receptors/6FS6/output_noE4Z.pdb.
+  • A metal-aware variant of 6Q99 was also generated (receptors/6Q99/output_metal.pdb) for redocking subsets in a metal-present context.
+
+Binding-site identification and pharmacophore features
+- Binding pockets were predicted with PlayMolecule DeepSite (pockets/* and deepsite_6Q99/), producing probability cubes (.cube) and ranked centers (.csv).
+  • The top-scoring pocket for ANDV (6Q99) had score ~0.97 with center ~[173.08, 155.54, 99.44] Å (pockets/6Q99/output.csv).
+  • For influenza PA (6FS6), the baloxavir (BXA) site was used via a template center (templates/6FS6_bxa_center.sdf).
+- Pharmacophore features were derived from pocket hotspots (pharmacophore/pharmacophore_6Q99/*.csv, *.pdb; pharmacophore/summary.csv).
+  • Comparative analysis (scripts/analyze_pharmacophore*.py; pharmacophore/pharmacophore_compare) highlighted a shared kernel comprising two H-bond acceptors plus one hydrophobe (2×ACC + 1×HPH).
+
+Ligand library curation
+- Starting data: influenza PA endonuclease inhibitors from ChEMBL (user-uploads/chembl_inhibitors.csv) with activity metadata (IC50/Ki/EC50/pChEMBL).
+- SMILES were fetched via the ChEMBL API and converted to 3D with RDKit (ETKDGv3 embedding, UFF minimization) using scripts/build_ligands_sdf.py, producing ligands/ligands.sdf and a CHEMBL↔SMILES map (ligands/ligand_map.csv).
+
+Docking workflows (AceDock)
+- Docking engine: PlayMolecule AceDock v1 (acedock.v1.acedock) with RDock scoring (scripts/submit_docking.py).
+- General parameters:
+  • mode = "free"; search radius = 8 Å around the template/center; n_poses = 10 per ligand; no pharmacophore rescoring; dummy_template = True (center-only template).
+- Receptors and templates:
+  • Influenza PA (6FS6): protein = receptors/6FS6/output_noE4Z.pdb; template = templates/6FS6_bxa_center.sdf; outdir = docking/PA_6FS6.
+  • ANDV (6Q99): protein = receptors/6Q99/output.pdb; template = docking/dock_inputs/pocket1_center_template.sdf (built from DeepSite’s top pocket center); outdir = docking/ANDV_6Q99_pocket1.
+- Metal-present redocking subsets:
+  • ANDV (6Q99, metal): protein = receptors/6Q99/output_metal.pdb; template = pocket1 center; ligands = curated “active” subsets (below); outdirs = docking/ANDV_6Q99_pocket1_metal_active and docking/ANDV_6Q99_pocket1_metal_modified.
+- Outputs include per-ligand pose SDFs and scores.csv, with the RDock score (more negative is better).
+
+Scoring analysis and statistics
+- Docking score tables from PA and ANDV runs were merged by ligand ID (analysis/merged_scores.csv) and summarized with SciPy (scripts/analyze_docking_scores.py; analysis/summary.csv).
+  • Reported metrics: medians per target, paired Wilcoxon signed-rank test on per-ligand scores, and a cross-target “dual top quartile” list (analysis/dual_top_quartile.csv).
+
+Active subset selection and analogue generation
+- Active subset from ANDV docking: ligands with AceDock RDock score ≤ −25.0 (potential drugs/active_subset.csv).
+- Analogue enumeration on the top 20 ANDV-scoring parents (potential drugs/active_subset_modified.csv):
+  • F_scan: single-fluorine additions at available aromatic C–H.
+  • Me_scan: single-methyl additions at available aromatic C–H.
+  • N_walk: single N heteroatom substitutions along eligible aromatic positions.
+  • Goal: preserve the 2×ACC + 1×HPH kernel while tuning peripheral vectors and physicochemical properties.
+
+Developability filtering and toxicity heuristics
+- Structural alerts: RDKit FilterCatalog (PAINS A/B/C, Brenk, NIH) applied to parent actives and analogues.
+- Property window (rule-of-thumb): 250 ≤ MW ≤ 550; 0.5 ≤ cLogP ≤ 4.5; 40 ≤ TPSA ≤ 130; HBD ≤ 3; HBA ≤ 8; RotB ≤ 8; aromatic rings ≤ 3.
+- Aggregation-risk heuristic: cLogP > 3.5 with low polarity (TPSA < 60 or HBD+HBA < 4).
+- Safe sets produced: potential drugs/active_subset_safe.csv and potential drugs/active_subset_modified_safe.csv, with intermediate screened tables.
+- Toxicity-focused heuristics (potential drugs/toxicity_*.csv):
+  • hERG risk proxy (cationic amphiphile: basic amine + cLogP ≥ 3 + ≥2 aromatic rings).
+  • Electrophile risk (e.g., Michael acceptors), aldehyde/epoxide/isothiocyanate flags.
+  • Redox/tox risk (catechol/quinone), mutagenicity (nitro-aromatic, azide, hydrazine, aniline), azole/CYP proxy.
+  • Aggregates summarized in potential drugs/toxicity_summary.txt.
+
+Pocket similarity and structural alignment
+- Local pocket comparisons used curated viral nuclease structures (pocket_similarity/*) and in-house scripts (scripts/active_site_and_alignment.py) to:
+  • Identify pocket-near residues (10 Å CA sphere) and metal coordination contacts (receptors/*/output*.pdb).
+  • Compute local backbone RMSD around the ANDV pocket center via Kabsch alignment (analysis/active_site/pocket_backbone_rmsd.txt).
+  • Rank pocket similarity across candidates (pocket_similarity/pocket1_similar_proteins_ranked*.csv), highlighting close matches to influenza PA and hantavirus homologs (e.g., 2ZNL, 4IUJ, 8P1N).
+
+Molecular dynamics preparation
+- Ligand parameterization: PlayMolecule Parameterize v2 (parameterize.v2.main_parameterize) with GAFF2, AM1-BCC charges, and ANI-2x for MM refits when applicable (md_runs/*/parameterize/run_*/inputs.json).
+- Complex assembly: selected AceDock complexes (e.g., md_runs/outlig53/complex_MOL.pdb) were prepared for GROMACS using scripts/prepare_gromacs_bundles.py, producing bundles in gmx_prep/*.
+- GROMACS setup (example: gmx_prep/outlig53):
+  • Ligand topology via ACPYPE (GAFF2, bcc charges); protein force field Amber14SB; TIP3P water.
+  • Box: cubic, 1.0 nm padding; solvation with SPC216; ions to 0.15 M (NaCl) and neutrality.
+  • Equilibration: NVT then NPT (velocity-rescale thermostat at 300 K; Parrinello-Rahman barostat at 1 bar).
+  • Production MD: 10 ns (dt = 2 fs), PME electrostatics, 1.0 nm cutoffs, LINCS on H-bonds; representative mdp files in gmx_prep/*/mdp/.
+
+Software and environments
+- PlayMolecule apps: proteinprepare, deepsite, acedock v1, parameterize v2 (accessed via the playmolecule Python package as in scripts/*).
+- RDKit (ETKDGv3, UFF) for 3D ligand generation and cheminformatics.
+- SciPy/NumPy/pandas for statistics and data wrangling.
+- GROMACS for MD (CLI commands scripted in run_gromacs.sh within each gmx_prep/* folder).
+
+Reproducibility and file organization
+- All inputs, scripts, and outputs are organized under this project root:
+  • scripts/: submission and analysis scripts (protein prep, pocket detection, docking, scoring, pharmacophore, MD prep).
+  • receptors/, pockets/, deepsite_6Q99/: prepared proteins and pocket predictions.
+  • ligands/: 3D SDF library and CHEMBL map; docking/dock_inputs/ for pocket-center templates.
+  • docking/: AceDock runs for PA and ANDV (including metal-present redock subsets); per-ligand SDF poses and scores.csv.
+  • analysis/: merged and summarized scoring statistics, pharmacophore comparisons, and alignment outputs.
+  • potential drugs/: active subsets, analogue libraries, developability screens, and toxicity flags/summaries.
+  • gmx_prep/, md_runs/: MD-ready bundles and parameterization logs for selected complexes.
+
+Data availability
+- PDB entries were obtained from RCSB (IDs listed above). ChEMBL molecules (user-uploads/chembl_inhibitors.csv) were fetched via the public ChEMBL REST API.
+- All generated intermediate and final files referenced above are present within the repository tree and can be regenerated using the provided scripts.
+
+Conserved-region analysis and proteome selection
+- Data sources and retrieval: UniProtKB and NCBI Protein/GenPept records for Andes orthohantavirus were retrieved and normalized with scripts/retrieve_andes_orthohantavirus_proteins.py, yielding UniProt FASTA/metadata and NCBI FASTA/metadata (data/uniprot/*, data/ncbi/*), and PDB cross-references (data/manifest_andes_orthohantavirus.json).
+- Sequence classification: NCBI entries were classified into N, L, and GPC (glycoprotein precursor) using metadata keywords (scripts/compute_andv_conservation.py). Length filters applied were N: 350–500 aa, L: 1700–2500 aa, GPC: 900–1400 aa.
+- Multiple sequence alignments (MSAs): For each category (N, GPC, L), MAFFT (--auto --anysymbol) was run with the reviewed UniProt reference included first (N: O36307; GPC: Q9E006; L: Q9E005). Outputs are data/conservation/{N,GPC,L}.aln.fasta.
+- Per-residue conservation scoring: Shannon entropy H was computed per alignment column (gaps ignored). ΔH = log2(20) − H quantifies conservation in bits (range 0 to 4.3219); results saved to data/conservation/*_deltaH.csv (including remapped Gn/Gc from GPC reference ranges 19–651 and 652–1138).
+- Structural mapping: ΔH profiles were mapped to structures by aligning reference sequences to PDB chains and writing variability = 1 − (ΔH/4.3219) into B-factors (scripts/map_deltaH_to_pdb.py), producing data/pdb_colored/*_var.pdb for visualization.
+- Ranking conserved functional regions: UniProt JSON features (Domain/Region/Motif/Active site/Metal binding/etc.) were intersected with ΔH to compute per-feature statistics and rank conserved vs variable regions (scripts/rank_conserved_regions.py), generating data/conservation/rankings/{conserved_regions_ranked.csv, variable_regions_ranked.csv}. The L endonuclease active-site region (UniProt Q9E005 pos ~124 and adjacent metal-binding residues) ranks among the most conserved (ΔHmedian ≈ 4.322).
+
+Target selection: L endonuclease (N-terminus of L)
+- Rationale framework: We summarized ANDV proteins and functions from UniProt (scripts/make_andv_protein_function_table.py; data/summary/andv_proteins_function_positions.csv) and combined (i) essentiality and enzymatic tractability, (ii) high conservation at catalytic motifs from ΔH analysis, (iii) availability of an experimentally resolved structure, and (iv) pharmacological precedent.
+- Decision: The N-terminal cap-snatching endonuclease of L (UniProt Q9E005) was selected as the primary small-molecule target. Supporting evidence:
+  • Conservation: Active-site and metal-binding residues are highly conserved (ΔHmedian ~ 4.322; data/conservation/L_deltaH.csv; data/conservation/rankings/conserved_regions_ranked.csv).
+  • Structure: Andes endonuclease structure 6Q99 is available and well-resolved for structure-based design; domain mapping and selections are documented in data/summary/6Q99_endonuclease_domain_map.csv and docs/6Q99_endonuclease_domain_map.txt.
+  • Druggability precedent: Influenza PA endonuclease (structurally/funcitionally analogous two-metal nuclease) has validated chemotypes (e.g., baloxavir), motivating cross-target docking and pharmacophore comparison.
+  • Practicality: Compact, metal-dependent pocket amenable to docking, pharmacophore-guided design, and MD refinement, with explicit Mn2+/Mg2+ modeling when appropriate.
+- Implementation detail: The pocket center for 6Q99 was selected from DeepSite’s top-ranked site (pockets/6Q99/output.csv) and exported to SDF (docking/dock_inputs/pocket1_center_template.sdf). Domain selections and metal annotations for visualization are provided in docs/l_endonuclease_domain_mapping.txt and data/summary/6Q99_endonuclease_domain_map.csv.
+
+Subdomain mapping of the ANDV L endonuclease (6Q99)
+- Objective: define consistent residue ranges and viewer selections for the N-lobe, catalytic core, and C-lobe of the N-terminal endonuclease domain of L, and annotate pocket-lining residues and metal sites.
+- Structural reference and numbering: PDB 6Q99, chain A. Note that the original model includes residues with negative indices (-1, 0) followed by 1–199; subdomain selections below use the positive PDB residue numbering as standardized in the mapping files.
+- Sources: docs/6Q99_endonuclease_domain_map.txt; data/summary/6Q99_endonuclease_domain_map.csv; docs/l_endonuclease_domain_mapping.txt.
+- Subdomain definitions and viewer selections (PDB chain A):
+  • N-lobe: residues 1–34; selection: "protein and chain A and resid 1 to 34"; style cartoon; color #00c8ff.
+  • Catalytic core (H–PD–D/E–K motif region): residues 35–130; selection: "protein and chain A and resid 35 to 130"; style cartoon; color #ff8c00.
+  • C-lobe: residues 131–199; selection: "protein and chain A and resid 131 to 199"; style cartoon; color #d500f9.
+  • Pocket-lining residues near the top site: residues 112–114; selection: "chain A and resid 112 to 114 and noh"; style licorice; color #ff4d4d.
+  • Metals (catalytic site): Mn2+ ions indexed as A 301–302; selection: "resname MN3 or name MN"; style spheres; color #2ecc71.
+- Pocket center context: The top-ranked DeepSite pocket for 6Q99, used for docking center selection, is at [173.08, 155.54, 99.44] Å (pockets/6Q99/output.csv; docking/dock_inputs/pocket1_center_template.sdf). Pocket-lining residues above were chosen within ~5 Å of this center.
+- Rationale and cross-references: The catalytic-core span captures the conserved two-metal endonuclease motif; active-site and metal-binding residues within this span are among the most conserved in the ΔH analysis (data/conservation/L_deltaH.csv; data/conservation/rankings/conserved_regions_ranked.csv). The mapping provides reproducible visual overlays for analyses and figures.

@@ -1,0 +1,17 @@
+label	header	year
+Influenza_A_PB1	>sp|B3EUR4|RDRP_I61A1 RNA-directed RNA polymerase catalytic subunit OS=Influenza A virus (strain A/Swine/Wisconsin/1/1961 H1N1) OX=383533 GN=PB1 PE=3 SV=1	1961
+Influenza_B_PB1	>sp|O36430|RDRP_INBP9 RNA-directed RNA polymerase catalytic subunit OS=Influenza B virus (strain B/Panama/45/1990) OX=408929 GN=PB1 PE=1 SV=1	1990
+Influenza_C_PB1	>sp|P19703|RDRP_INCJJ RNA-directed RNA polymerase catalytic subunit OS=Influenza C virus (strain C/JJ/1950) OX=11560 GN=PB1 PE=3 SV=1	1950
+Influenza_D_PB1	>tr|A0A646S360|A0A646S360_9ORTO RNA-directed RNA polymerase catalytic subunit OS=Influenza D virus OX=1511084 GN=PB1 PE=4 SV=1	
+Isavirus_PB1	>sp|Q8V3T6|RDRP_ISAV8 RNA-directed RNA polymerase catalytic subunit OS=Infectious salmon anemia virus (isolate Atlantic salmon/Norway/810/9/99) OX=652965 GN=Segment-2 PE=3 SV=1	
+Thogoto_virus_PB1	>sp|O41353|RDRP_THOGV RNA-directed RNA polymerase catalytic subunit OS=Thogoto virus (isolate SiAr 126) OX=126796 GN=Segment 2 PE=1 SV=1	
+Quaranfil_virus_PB1	>sp|D0QX26|RDRP_QRFVE RNA-directed RNA polymerase catalytic subunit OS=Quaranfil virus (isolate QrfV/Tick/Afghanistan/EG_T_377/1968) OX=1559362 GN=PB1 PE=3 SV=1	1968
+Andes_orthohantavirus_L	>sp|Q9E005|L_ANDV RNA-directed RNA polymerase L OS=Andes orthohantavirus OX=1980456 PE=1 SV=4	1980
+Hantaan_virus_L	>sp|P23456|L_HANTV RNA-directed RNA polymerase L OS=Hantaan virus (strain 76-118) OX=11602 GN=L PE=1 SV=3	
+Puumala_virus_L	>sp|P0C760|L_PUUMS RNA-directed RNA polymerase L OS=Puumala virus (strain Sotkamo/V-2969/81) OX=39002 GN=L PE=3 SV=1	
+Bunyamwera_virus_L	>sp|P20470|L_BUNYW RNA-directed RNA polymerase L OS=Bunyamwera virus OX=35304 GN=L PE=1 SV=1	
+Rift_Valley_fever_virus_L	>sp|P27316|L_RVFVZ RNA-directed RNA polymerase L OS=Rift valley fever virus (strain ZH-548 M12) OX=11589 GN=L PE=1 SV=1	
+Crimean_Congo_hemorrhagic_fever_virus_L	>sp|Q6TQR6|L_CCHFI RNA-directed RNA polymerase L OS=Crimean-Congo hemorrhagic fever virus (strain Nigeria/IbAr10200/1970) OX=652961 GN=L PE=1 SV=3	1970
+Tomato_spotted_wilt_virus_L	>sp|P28976|L_TSWV1 RNA-directed RNA polymerase L OS=Tomato spotted wilt virus (strain Brazilian Br-01) OX=36413 GN=L PE=3 SV=1	
+Rabies_lyssavirus_L	>sp|A3RM23|L_RABVI Large structural protein OS=Rabies virus (strain India) OX=445790 GN=L PE=3 SV=1	
+Measles_morbillivirus_L	>tr|A0MSM9|A0MSM9_9MONO RNA-directed RNA polymerase L OS=Measles morbillivirus OX=11234 GN=L PE=3 SV=1	

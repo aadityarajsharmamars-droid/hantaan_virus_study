@@ -1,0 +1,57 @@
+Divergent evolution of cap-snatching endonucleases: Influenza PA (6FS6) vs Andes virus L N-terminus (6Q99)
+
+Summary
+Evidence from sequence, taxonomy, structure/chemistry, pharmacophore geometry, and cross-target docking indicates that the influenza PA endonuclease and the Andes orthohantavirus L endonuclease NTD are homologous domains that have diverged while conserving a core catalytic pharmacophore. This supports divergent evolution rather than convergence.
+
+Taxonomy: shared ancestry and point of divergence
+- Shared lineage: Viruses → Riboviria (realm) → Orthornavirae → Negarnaviricota → Polyploviricotina
+- Divergence:
+  • Influenza A (6FS6): Insthoviricetes → Articulavirales → Orthomyxoviridae (Alphainfluenzavirus)
+  • Andes orthohantavirus (6Q99): Bunyaviricetes → Elliovirales → Hantaviridae (Orthohantavirus)
+Source: reports/taxonomy_mapping.csv
+
+Sequence relatedness (PDB-derived chains)
+- Global alignment aligned length ≈ 191 aa with ≈ 33.5% identity.
+  • This level over ~200 aa is consistent with homology (outside the deep twilight zone).
+  • FASTAs prepared for robust testing with HHsearch: analysis/sequences/6FS6_chainE.fasta, 6Q99_chainA.fasta
+- Action: run scripts/run_hhsuite.sh on an HH-suite setup to confirm homology with profile–profile statistics.
+
+Structural classification and fold context
+- 6FS6 maps in CATH to 3.40.91.90 (Alpha–Beta; 3-layer (aba) sandwich; “Restriction Endonuclease” topology; Influenza PA endonuclease domain).
+- 6Q99 CATH mapping was not returned by the PDBe endpoint at query time. Literature classifies hantavirus L endonuclease NTD as a homologous cap‑snatching endonuclease fold.
+
+Active-site chemistry and residue environment (≤10 Å from pocket centers)
+- 6FS6 (influenza PA) shows a two-metal endonuclease chemistry with Mn coordination detected:
+  • Examples: Mn A:901 ↔ ASP108 OD2 (2.14 Å), GLU119 OE2 (2.31 Å), ILE120 O (2.09 Å);
+              Mn A:902 ↔ GLU80 OE1 (2.38 Å), ASP108 OD1 (2.04 Å)
+  • File: analysis/active_site/fs6_metal_coordination.csv
+- 6Q99 (Andes L NTD) in the prepared structure: no metal coordination within 2.6 Å detected (analysis/active_site/q99_metal_coordination.csv).
+- Pocket residue lists: analysis/active_site/fs6_pocket_residues.csv; analysis/active_site/q99_pocket_residues.csv
+
+Pharmacophore geometry (6 Å radius around centers)
+- Conserved kernel: 2× hydrogen-bond acceptors (ACC) + 1× hydrophobe (HPH), shared by both pockets
+- Local kernel alignment RMSD: 1.849 Å (pharmacophore_compare/triangle_rmsd.txt)
+- Type composition overlap score: 0.30 (multiplicity-aware Jaccard; pharmacophore_compare/summary.txt)
+- Divergent features:
+  • Andes: multiple donor (DON) and positive (POS) hotspots
+  • Influenza: negative (carboxylate) site and metal coordination (MET) when using a larger radius
+
+Cross-target docking comparison (AceDock; 248 ligands)
+- N common ligands: 248
+- Medians: 6FS6 = -28.77; 6Q99 = -21.89; Δ (ANDV − PA) = +6.84 (more negative is better)
+- Wilcoxon signed-rank p = 5.71e-41 (significant difference)
+- Dual-top-quartile ligands saved in analysis/dual_top_quartile.csv
+Files: analysis/summary.csv, analysis/merged_scores.csv
+
+Interpretation: evidence for divergent evolution
+- The coherent sequence signal (≈33.5% identity over ~191 aa) and the shared catalytic pharmacophore strongly indicate a common ancestral endonuclease domain, with functional constraints maintaining the 2×ACC + 1×HPH geometry.
+- Divergence is evident in surrounding pocket features and metal usage (influenza PA shows robust Mn coordination in the co-crystal; Andes L NTD did not show metals under the prepared structure conditions). These chemical/architectural differences explain the significant shift in docking score distributions.
+- Taxonomy shows a shared high-rank ancestry (Orthornavirae → Negarnaviricota → Polyploviricotina), with divergence at the class/order/family level (Orthomyxoviridae vs Hantaviridae), consistent with domain-level divergence across lineages that retained cap‑snatching function.
+
+Conclusion
+- Combined taxonomy, sequence, structural/chemical mapping, pharmacophore alignment, and docking statistics support homologous (divergent) evolution of the influenza PA and hantavirus L endonuclease NTDs.
+
+Next steps to finalize the claim
+1) Run HHblits/HHsearch (scripts/run_hhsuite.sh) to report HHsearch probability/E-values for profile–profile homology.
+2) Retrieve SCOPe/CATH mapping for 6Q99 (if available) to document same/different superfamily assignment.
+3) Create publication figures with labeled pocket residues, feature pseudo-atoms, and metal–ligand distances; include overlapped-pocket snapshots (screenshots/overlap_pharmacophore_colored.png; screenshots/proteins_overlapped_pocket.png).

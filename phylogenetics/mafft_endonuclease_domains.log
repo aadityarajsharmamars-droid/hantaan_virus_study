@@ -1,0 +1,14 @@
+STEP 001-020-1     1- 571
+0
+g=A, model=BLOSUM62, 1.53, -0.00, -0.00, noshift, amax=0.0
+1 thread(s)
+
+(s)
+
+
+o disable this change, add the --leavegappyregion option.
+vious versions.
+.
+, amax=0.0
+0 thread(s)
+

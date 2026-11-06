@@ -1,0 +1,1640 @@
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.5553  153.2551   98.6011 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.4132  154.1636   98.7805 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.1482  153.6413   98.7269 C   0  0  0  0  0  0  0  0  0  0  0  0
+  169.0246  154.4538   98.8913 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.7530  153.8839   98.8236 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.2011  155.8222   99.1188 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.2066  156.5823   99.2635 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.4895  156.3485   99.1867 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.6019  155.5055   99.0336 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9821  156.1224   99.0969 C   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1847  156.9685   97.9985 O   0  0  0  0  0  0  0  0  0  0  0  0
+  167.5788  152.9233   99.0941 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1451  156.3954   97.1887 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9391  152.9498   99.5857 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.2315  152.3650   98.0417 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3497  153.7708   98.0417 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.0152  152.5636   98.5514 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.6352  157.4249   99.3603 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.0781  156.7036  100.0259 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.7349  155.3207   99.0761 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+29.60312372,110.65871650,-63.29575034,170.60141768,155.16316662,98.84097410
+-0.19949381,-0.11131699,-3.09335763
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-23.6204
+
+>  <SCORE.INTER>
+-23.7621
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-3.57797
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+8.06958
+
+>  <SCORE.INTER.VDW>
+-10.8714
+
+>  <SCORE.INTER.norm>
+-2.16019
+
+>  <SCORE.INTRA>
+0.14177
+
+>  <SCORE.INTRA.DIHEDRAL>
+0.211528
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.193833
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.132922
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.0128881
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-2.14731
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.5357  153.3818   98.9302 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3502  154.2507   98.9717 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.1114  153.6683   98.9233 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.9490  154.4410   98.9605 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.7063  153.8096   98.9026 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.0586  155.8320   99.0534 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.0280  156.5566   99.0813 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.3199  156.4208   99.1166 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.4719  155.6184   99.0932 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8213  156.3010   99.1460 C   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1533  156.8144   97.8854 O   0  0  0  0  0  0  0  0  0  0  0  0
+  167.5801  152.8437   99.1807 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.2031  156.0385   97.2678 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8549  153.1478   99.9565 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.2886  152.4494   98.4015 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3505  153.8982   98.4015 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.0309  152.5734   98.8540 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.4132  157.5147   99.1849 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.7840  157.1238   99.8751 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.5834  155.5670   99.4468 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+23.59040931,98.84315576,-61.59120850,170.50893613,155.18725329,98.88883435
+-0.20958685,-0.08051336,3.08907085
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-23.5797
+
+>  <SCORE.INTER>
+-23.4753
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-3.55788
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+8.29839
+
+>  <SCORE.INTER.VDW>
+-10.8234
+
+>  <SCORE.INTER.norm>
+-2.13412
+
+>  <SCORE.INTRA>
+-0.104381
+
+>  <SCORE.INTRA.DIHEDRAL>
+-0.209794
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.165139
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.0830847
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+-0.00948922
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-2.14361
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.4090  153.3341   97.8343 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.2878  154.2084   98.2091 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.0519  153.6456   98.3874 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.9493  154.4242   98.7449 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.7060  153.8134   98.9107 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.1177  155.8004   98.9268 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.1403  156.5305   99.2421 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.3791  156.3681   98.7584 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.4736  155.5588   98.4142 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8214  156.2199   98.2241 C   0  0  0  0  0  0  0  0  0  0  0  0
+  173.5946  156.0845   99.3847 O   0  0  0  0  0  0  0  0  0  0  0  0
+  167.6158  152.8461   99.1980 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.0880  156.5263  100.1155 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8971  152.9535   98.7437 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.0321  152.4891   97.2394 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1367  153.9056   97.2394 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.9258  152.5620   98.2466 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.5174  157.4508   98.8952 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3442  155.7436   97.3816 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.6705  157.2894   98.0160 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+28.39738584,-84.25365329,-59.91377632,170.55228674,155.08240364,98.66700533
+-0.10434636,-0.10009993,-2.88215327
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-22.9462
+
+>  <SCORE.INTER>
+-22.99
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-2.90404
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+8.67817
+
+>  <SCORE.INTER.VDW>
+-12.8059
+
+>  <SCORE.INTER.norm>
+-2.09
+
+>  <SCORE.INTRA>
+0.0437847
+
+>  <SCORE.INTRA.DIHEDRAL>
+0.00781085
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.0933077
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.0865331
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.00398043
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-2.08602
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.7946  155.9637   98.7690 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3847  155.5542   98.8481 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.4441  156.5044   99.1452 C   0  0  0  0  0  0  0  0  0  0  0  0
+  169.0897  156.1763   99.2329 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.1637  157.1724   99.5440 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.6933  154.8543   99.0078 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.4794  154.5259   99.0873 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.6508  153.8925   98.6921 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.0042  154.2536   98.5949 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.0119  153.1735   98.2672 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.2689  153.1536   96.8899 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.4415  158.0558   99.9550 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8074  153.9636   96.6907 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1998  156.0814   99.7849 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3699  155.1955   98.2315 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8689  156.9205   98.2315 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.7610  157.5436   99.3176 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.3463  152.8498   98.5189 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9482  153.3737   98.8087 H   0  0  0  0  0  0  0  0  0  0  0  0
+  171.6040  152.1980   98.5705 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+-17.20864437,-87.16191010,72.12650352,170.28456144,155.03143924,98.70998133
+-0.55051657,0.16979012,0.34154578
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-22.5356
+
+>  <SCORE.INTER>
+-22.5744
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-3.4002
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+11.7039
+
+>  <SCORE.INTER.VDW>
+-11.8836
+
+>  <SCORE.INTER.norm>
+-2.05222
+
+>  <SCORE.INTRA>
+0.0388061
+
+>  <SCORE.INTRA.DIHEDRAL>
+0.0462087
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.118003
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.0747032
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.00352783
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-2.04869
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.8017  155.9660   98.7988 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3909  155.5565   98.8617 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.4481  156.5045   99.1587 C   0  0  0  0  0  0  0  0  0  0  0  0
+  169.0929  156.1763   99.2314 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.1645  157.1700   99.5430 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.6979  154.8565   98.9911 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.4832  154.5280   99.0568 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.6578  153.8971   98.6754 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.0122  154.2584   98.5936 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.0224  153.1808   98.2654 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.2761  153.1591   96.8876 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.4401  158.0536   99.9549 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8164  153.9674   96.6864 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1961  156.0805   99.8193 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3826  155.1994   98.2650 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8818  156.9245   98.2650 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.7639  157.5420   99.3431 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.3544  152.8561   98.4902 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9594  153.3848   98.8043 H   0  0  0  0  0  0  0  0  0  0  0  0
+  171.6182  152.2046   98.5714 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+-16.52628229,-88.08071241,72.46449986,170.29018537,155.03401038,98.70863519
+-0.55066604,0.16051704,0.35094882
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-22.5337
+
+>  <SCORE.INTER>
+-22.5637
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-3.40371
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+11.6886
+
+>  <SCORE.INTER.VDW>
+-11.8597
+
+>  <SCORE.INTER.norm>
+-2.05125
+
+>  <SCORE.INTRA>
+0.0300002
+
+>  <SCORE.INTRA.DIHEDRAL>
+0.0521993
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.12285
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.0653257
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.00272729
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-2.04852
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.4473  153.2844   97.8827 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3389  154.1775   98.2511 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.0858  153.6416   98.3873 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.9942  154.4391   98.7366 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.7328  153.8557   98.8591 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.1915  155.8063   98.9542 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.2248  156.5531   99.2632 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.4699  156.3462   98.8286 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.5525  155.5179   98.4917 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9200  156.1495   98.3486 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.8220  157.3639   97.6565 O   0  0  0  0  0  0  0  0  0  0  0  0
+  167.6114  152.8916   99.1455 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.2831  157.9721   98.2270 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9260  152.8987   98.7948 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.0590  152.4438   97.2888 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1861  153.8426   97.2888 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.9369  152.5649   98.2187 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.6311  157.4218   98.9934 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3415  156.3337   99.3478 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.5734  155.4670   97.7853 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+30.03938768,134.99558876,64.47727502,170.52183439,155.21303374,98.50615480
+-0.26355520,-0.23427576,-3.05435619
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-22.0997
+
+>  <SCORE.INTER>
+-22.7851
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-2.88148
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+9.23417
+
+>  <SCORE.INTER.VDW>
+-12.9298
+
+>  <SCORE.INTER.norm>
+-2.07137
+
+>  <SCORE.INTRA>
+0.685388
+
+>  <SCORE.INTRA.DIHEDRAL>
+0.232036
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.248207
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.693473
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.062308
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-2.00906
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.6918  156.0571   98.5971 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3098  155.5653   98.6987 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.3141  156.4660   98.9693 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.9827  156.0592   99.0763 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.9988  157.0070   99.3593 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.6669  154.7086   98.8984 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.4756  154.3097   98.9963 O   0  0  0  0  0  0  0  0  0  0  0  0
+  169.6800  153.7967   98.6094 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.0084  154.2361   98.4918 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.0789  153.2089   98.1945 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.3598  153.1863   96.8220 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.2229  157.9156   99.7474 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1292  152.5705   96.7006 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.1039  156.2038   99.6064 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3038  155.3216   98.0545 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.7015  157.0139   98.0545 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.5676  157.5278   99.1046 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.4390  152.7321   98.4733 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9936  153.4666   98.7484 H   0  0  0  0  0  0  0  0  0  0  0  0
+  171.7197  152.2163   98.5038 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+-17.84928792,-85.38958564,174.11356583,170.24809481,154.96580380,98.58628508
+-0.49993602,0.19153864,0.29658879
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-20.566
+
+>  <SCORE.INTER>
+-20.4196
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-2.78176
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+12.2716
+
+>  <SCORE.INTER.VDW>
+-12.6977
+
+>  <SCORE.INTER.norm>
+-1.85633
+
+>  <SCORE.INTRA>
+-0.146404
+
+>  <SCORE.INTRA.DIHEDRAL>
+-0.453724
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.0484958
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.104706
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+-0.0133095
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-1.86964
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  169.9372  156.5764  100.3660 C   0  0  0  0  0  0  0  0  0  0  0  0
+  170.6348  155.6147   99.4997 N   0  0  0  0  0  0  0  0  0  0  0  0
+  171.9653  155.8130   99.2421 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.6816  154.9332   98.4282 C   0  0  0  0  0  0  0  0  0  0  0  0
+  174.0341  155.1742   98.1853 O   0  0  0  0  0  0  0  0  0  0  0  0
+  172.0245  153.8304   97.8737 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.6420  153.0230   97.1290 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.6743  153.6234   98.1487 C   0  0  0  0  0  0  0  0  0  0  0  0
+  169.9823  154.5155   98.9835 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.5129  154.2622   99.2410 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.7613  155.3978   98.9113 O   0  0  0  0  0  0  0  0  0  0  0  0
+  174.4464  155.0508   97.2682 H   0  0  0  0  0  0  0  0  0  0  0  0
+  168.0764  155.6964   98.0183 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.1220  156.3216  101.4200 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.3109  157.5909  100.1630 H   0  0  0  0  0  0  0  0  0  0  0  0
+  168.8568  156.5362  100.1630 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.4782  156.6800   99.6839 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.1502  152.7607   97.7116 H   0  0  0  0  0  0  0  0  0  0  0  0
+  168.1774  153.4135   98.6269 H   0  0  0  0  0  0  0  0  0  0  0  0
+  168.3694  154.0339  100.3074 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+-138.47775368,52.28833465,47.31226596,170.97519429,154.82101368,98.71169214
+-2.78688488,-0.14338889,-2.53157885
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-18.9724
+
+>  <SCORE.INTER>
+-20.6856
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-2.73558
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+8.64327
+
+>  <SCORE.INTER.VDW>
+-11.8195
+
+>  <SCORE.INTER.norm>
+-1.88051
+
+>  <SCORE.INTRA>
+1.71317
+
+>  <SCORE.INTRA.DIHEDRAL>
+1.82562
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+0.136935
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.731894
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.155743
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-1.72476
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  172.8578  153.7434   97.8361 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.5196  154.2619   98.1561 N   0  0  0  0  0  0  0  0  0  0  0  0
+  170.4534  153.4049   98.0884 C   0  0  0  0  0  0  0  0  0  0  0  0
+  169.1592  153.8387   98.3821 C   0  0  0  0  0  0  0  0  0  0  0  0
+  168.0992  152.9357   98.2952 O   0  0  0  0  0  0  0  0  0  0  0  0
+  168.9557  155.1709   98.7556 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.7985  155.5940   99.0193 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.0441  156.0371   98.8371 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3370  155.5699   98.5515 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.4873  156.5493   98.6355 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.9138  156.6819   99.9636 O   0  0  0  0  0  0  0  0  0  0  0  0
+  167.6529  152.5491   99.1184 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.1390  157.0327  100.4760 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.4020  153.5326   98.7685 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.7618  152.8174   97.2502 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.4108  154.4924   97.2502 H   0  0  0  0  0  0  0  0  0  0  0  0
+  170.6195  152.3571   97.7977 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.8903  157.0875   99.1253 H   0  0  0  0  0  0  0  0  0  0  0  0
+  173.3224  156.1826   98.0206 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.1516  157.5298   98.2667 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+105.75136035,-100.02612258,-61.13052728,170.51438833,154.89139031,98.62547995
+-0.41390579,-0.07452216,-2.74606531
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-18.9505
+
+>  <SCORE.INTER>
+-20.6176
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-2.58375
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+8.39806
+
+>  <SCORE.INTER.VDW>
+-12.1986
+
+>  <SCORE.INTER.norm>
+-1.87433
+
+>  <SCORE.INTRA>
+1.66711
+
+>  <SCORE.INTRA.DIHEDRAL>
+3.38074
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.149621
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.0515441
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.151555
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-1.72277
+
+>  <pchembl_max>
+5.33
+
+$$$$
+CHEMBL4552510
+     Acellera       3D
+
+ 20 20  0  0  1  0  0  0  0  0999 V2000
+  170.7880  155.4238  101.9071 C   0  0  0  0  0  0  0  0  0  0  0  0
+  170.9728  154.8753  100.5554 N   0  0  0  0  0  0  0  0  0  0  0  0
+  171.9716  153.9604  100.3526 C   0  0  0  0  0  0  0  0  0  0  0  0
+  172.1947  153.4034   99.0918 C   0  0  0  0  0  0  0  0  0  0  0  0
+  173.2267  152.4793   98.9255 O   0  0  0  0  0  0  0  0  0  0  0  0
+  171.3778  153.7869   98.0236 C   0  0  0  0  0  0  0  0  0  0  0  0
+  171.5593  153.3076   96.8725 O   0  0  0  0  0  0  0  0  0  0  0  0
+  170.3535  154.7074   98.2359 C   0  0  0  0  0  0  0  0  0  0  0  0
+  170.1416  155.2397   99.5178 C   0  0  0  0  0  0  0  0  0  0  0  0
+  169.0293  156.2494   99.6992 C   0  0  0  0  0  0  0  0  0  0  0  0
+  167.8754  155.8237   99.0281 O   0  0  0  0  0  0  0  0  0  0  0  0
+  173.4254  152.0502   98.0296 H   0  0  0  0  0  0  0  0  0  0  0  0
+  168.0855  155.8516   98.0581 H   0  0  0  0  0  0  0  0  0  0  0  0
+  171.0463  154.6571  102.6524 H   0  0  0  0  0  0  0  0  0  0  0  0
+  171.4409  156.2991  102.0401 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.7386  155.7255  102.0401 H   0  0  0  0  0  0  0  0  0  0  0  0
+  172.6088  153.6593  101.1972 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.7106  155.0172   97.3988 H   0  0  0  0  0  0  0  0  0  0  0  0
+  168.8074  156.3569  100.7712 H   0  0  0  0  0  0  0  0  0  0  0  0
+  169.3504  157.2159   99.2835 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  4  5  1  0
+  4  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  2  0
+  9 10  1  0
+ 10 11  1  0
+  2  9  1  0
+  5 12  1  0
+ 11 13  1  0
+  1 14  1  0
+  1 15  1  0
+  1 16  1  0
+  3 17  1  0
+  8 18  1  0
+ 10 19  1  0
+ 10 20  1  0
+M  END
+>  <CHROM.1>
+-179.96173335,-138.24770507,-66.94466673,170.84328981,154.46888305,99.26970151
+-2.63321656,0.57504753,-1.89640224
+
+>  <Name>
+CHEMBL4552510
+
+>  <RI>
+350297000.0
+
+>  <Rbt.Current_Directory>
+/workspace
+
+>  <Rbt.Executable>
+rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+
+>  <Rbt.Library>
+libRbt.so (2021.1, Build901 2021/07/19)
+
+>  <Rbt.Parameter_File>
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+
+>  <Rbt.Receptor>
+/workspace/scratch/run_11_05_2026_08_34_6656164a/rdock-grid.prm
+
+>  <SCORE>
+-18.3834
+
+>  <SCORE.INTER>
+-18.4642
+
+>  <SCORE.INTER.CONST>
+1
+
+>  <SCORE.INTER.POLAR>
+-3.03528
+
+>  <SCORE.INTER.ROT>
+1
+
+>  <SCORE.INTER.SOLV>
+8.75978
+
+>  <SCORE.INTER.VDW>
+-9.37845
+
+>  <SCORE.INTER.norm>
+-1.67856
+
+>  <SCORE.INTRA>
+0.080739
+
+>  <SCORE.INTRA.DIHEDRAL>
+-0.757495
+
+>  <SCORE.INTRA.DIHEDRAL.0>
+1.75028
+
+>  <SCORE.INTRA.POLAR>
+0
+
+>  <SCORE.INTRA.POLAR.0>
+0
+
+>  <SCORE.INTRA.REPUL>
+0
+
+>  <SCORE.INTRA.REPUL.0>
+0
+
+>  <SCORE.INTRA.SOLV>
+-0.212331
+
+>  <SCORE.INTRA.SOLV.lig_0>
+-13.676
+
+>  <SCORE.INTRA.VDW>
+0.565652
+
+>  <SCORE.INTRA.VDW.0>
+-0.645554
+
+>  <SCORE.INTRA.norm>
+0.00733991
+
+>  <SCORE.RESTR>
+0
+
+>  <SCORE.RESTR.CAVITY>
+0
+
+>  <SCORE.RESTR.norm>
+0
+
+>  <SCORE.SYSTEM>
+0
+
+>  <SCORE.SYSTEM.CONST>
+0
+
+>  <SCORE.SYSTEM.DIHEDRAL>
+0
+
+>  <SCORE.SYSTEM.SOLV>
+0
+
+>  <SCORE.SYSTEM.norm>
+0
+
+>  <SCORE.heavy>
+11
+
+>  <SCORE.norm>
+-1.67122
+
+>  <pchembl_max>
+5.33
+
+$$$$

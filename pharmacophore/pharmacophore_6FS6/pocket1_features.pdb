@@ -1,0 +1,4 @@
+HETATM    1  SC  PH_HPH A   1      14.036  90.979  43.244  1.00 10.00          C
+HETATM    2  OE1 PH_ACC A   2      14.418  97.254  47.453  1.00 10.00          C
+HETATM    3  OE2 PH_ACC A   3      12.686  97.360  46.106  1.00 10.00          C
+HETATM    4  CD  PH_NEG A   4      13.190  97.188  47.235  1.00 10.00          C

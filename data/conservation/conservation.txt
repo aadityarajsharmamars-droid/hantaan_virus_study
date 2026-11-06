@@ -1,0 +1,65 @@
+Andes orthohantavirus (ANDV) protein conservation analysis
+
+Scope
+- Proteins: Nucleoprotein (N; UniProt O36307), Glycoprotein precursor (GPC; UniProt Q9E006) split into Gn (19–651) and Gc (652–1138), and RNA-directed RNA polymerase (L; UniProt Q9E005).
+- Sequences: ANDV protein records from NCBI plus the reviewed UniProt reference for each protein.
+- MSAs: Built with MAFFT; per-position conservation computed from the alignments.
+
+Method
+- For each MSA column, Shannon entropy H was computed on the 20 amino-acid alphabet.
+- Information content per position was defined as ΔH = log2(20) − H (range: 0–4.322 bits).
+  • High ΔH (~4.3) = strongly conserved; low ΔH (~0) = highly variable.
+- GPC ΔH was split to Gn and Gc according to the UniProt-reviewed ANDV reference coordinates.
+- Structural mapping: ΔH values were mapped to available PDB structures by sequence alignment and encoded in B-factors to enable blue (conserved) to red (variable) coloring in the viewer.
+
+Input and output files
+- Alignments: data/conservation/N.aln.fasta, GPC.aln.fasta, L.aln.fasta (with corresponding source FASTAs N.fasta, GPC.fasta, L.fasta).
+- Per-position conservation (CSV):
+  • data/conservation/N_deltaH.csv
+  • data/conservation/GPC_deltaH.csv
+  • data/conservation/Gn_deltaH.csv
+  • data/conservation/Gc_deltaH.csv
+  • data/conservation/L_deltaH.csv
+- Manifest: data/conservation/manifest.json
+
+MSA depths (number of sequences)
+- N: 27 sequences
+- GPC: 61 sequences
+- L: 6 sequences (limited availability; interpret with caution)
+
+Summary statistics by protein (from ΔH CSVs)
+- N (428 positions)
+  • mean ΔH = 4.24 bits; median = 4.32; min = 2.40; max = 4.32
+  • ΔH ≥ 4.0 at 91.36% of positions; ΔH ≥ 3.5 at 96.03%; ΔH < 1.0 at 0.00%
+- GPC (1138 positions)
+  • mean ΔH = 4.25 bits; median = 4.32; min = 2.89; max = 4.32
+  • ΔH ≥ 4.0 at 91.65%; ΔH ≥ 3.5 at 98.24%; ΔH < 1.0 at 0.00%
+- Gn (derived from GPC; 633 positions)
+  • mean ΔH = 4.23 bits; median = 4.32; min = 2.89; max = 4.32
+  • ΔH ≥ 4.0 at 89.10%; ΔH ≥ 3.5 at 97.79%; ΔH < 1.0 at 0.00%
+- Gc (derived from GPC; 487 positions)
+  • mean ΔH = 4.28 bits; median = 4.32; min = 2.90; max = 4.32
+  • ΔH ≥ 4.0 at 95.28%; ΔH ≥ 3.5 at 98.97%; ΔH < 1.0 at 0.00%
+- L (2153 positions)
+  • mean ΔH = 4.20 bits; median = 4.32; min = 2.07; max = 4.32
+  • ΔH ≥ 4.0 at 86.44%; ΔH ≥ 3.5 at 94.43%; ΔH < 1.0 at 0.00%
+
+Interpretation and key findings
+- Across the available ANDV sequence sets, all four proteins exhibit strong conservation, with most positions near the theoretical maximum ΔH (4.322 bits). This likely reflects the high sequence identity among included ANDV isolates.
+- Gc is the most conserved of the glycoprotein subunits (ΔH ≥ 4.0 at ~95%), consistent with its role as the class II fusion protein core where structural constraints are strongest.
+- Gn shows slightly more variability than Gc but remains highly conserved overall.
+- N is highly conserved, consistent with its essential role in encapsidation and replication complex assembly.
+- L also appears highly conserved, particularly around catalytic/functional regions; however, only 6 sequences were available, so variability may be under-sampled.
+
+Structural visualization (current viewer setup)
+- Nucleoprotein (e.g., PDB 5E04 fragment), Gn/Gc ectodomain (PDB 6Y5F assembly), and L N-terminus fragment (PDB 6Q99) were colored by ΔH (blue = conserved, red = variable) by encoding ΔH in B-factors and thresholding for display.
+
+Limitations and next steps
+- MSA composition: The current MSAs include only ANDV sequences. To reveal subtype- or cross-species variability, expand to additional orthohantaviruses and/or include partial sequences.
+- Sampling depth: L has limited full-length records; consider including curated partials to increase coverage, or relax completeness filters.
+- Alternative conservation metrics: Consider relative entropy (Kullback–Leibler vs background), position-specific scoring, or phylogenetically-informed weights (Henikoff or tree-based reweighting) to reduce sampling bias.
+- Functional mapping: Relate conserved/variable stretches to known domains (signal peptide, transmembrane segments, fusion loop, endonuclease, polymerase motifs) and known/putative epitopes.
+- Thresholds for display can be tuned (e.g., highlight ΔH < 3.0 as variable) depending on desired stringency.
+
+Provenance
+- Generated May 2026 from data in data/conservation/* using MAFFT-built MSAs and Shannon-entropy-based ΔH.

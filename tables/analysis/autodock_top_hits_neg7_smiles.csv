@@ -1,0 +1,11 @@
+CHEMBL,score,smiles,present_in_chembl_inhibitors
+CHEMBL16299,-8.26,O=C(Nc1ccccc1)Nc1ccc2c(C(=O)c3ccccc3)c(O)n(O)c2c1,True
+CHEMBL16525,-8.236,O=C(Nc1cccc(C(=O)O)c1)Nc1ccc2c(C(=O)c3ccccc3)c(O)n(O)c2c1,True
+CHEMBL16239,-8.234,O=C(Nc1ccc2c(C(=O)c3ccccc3)c(O)n(O)c2c1)c1ccc2ccccc2c1,True
+CHEMBL2040585,-8.062,O=C(NC1CCCc2ccccc21)c1nc(-c2cnccn2)[nH]c(=O)c1O,True
+CHEMBL297453,-8.052,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,True
+CHEMBL2040582,-8.009,Cc1ccc([C@@H](C)NC(=O)c2nc(-c3cnccn3)[nH]c(=O)c2O)cc1,True
+CHEMBL16453,-7.963,Cc1cc(C(=O)Nc2ccc3c(C(=O)c4ccccc4)c(O)n(O)c3c2)no1,True
+CHEMBL2040580,-7.914,C[C@H](NC(=O)c1nc(-c2cnccn2)[nH]c(=O)c1O)c1ccccc1,True
+CHEMBL2040581,-7.913,C[C@@H](NC(=O)c1nc(-c2cnccn2)[nH]c(=O)c1O)c1ccccc1,True
+CHEMBL5195503,-7.879,O=CN1[C@H](C(=O)Oc2ccccc2)Cc2cc(O)c(O)cc2[C@@H]1Cc1ccc(O)c(O)c1,True

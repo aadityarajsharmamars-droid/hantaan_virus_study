@@ -1,0 +1,88 @@
+Project: Andes orthohantavirus (ANDV) L endonuclease – cross‑targetability of influenza endonuclease inhibitors and safety‑focused triage
+Date: 2026‑05‑12
+
+1) Targets, structures, and pocket context
+- ANDV endonuclease: 6Q99 (L protein N‑terminal endonuclease; pocket defined by DeepSite).
+- Influenza PA endonuclease references: 6FS6/6FS8/6FS9 (baloxavir acid/BXA bound) and other PA/heterotrimers.
+- Local pocket similarity (reports/pocket1_overlay_rmsd.txt):
+  • 6Q99 vs Influenza PA (2ZNL/4IUJ) RMSD ~2.8 Å (local pocket atoms, 6 Å sphere).
+  • 6Q99 vs Hantaan virus L (8P1N) RMSD ~2.4 Å.
+- Pocket candidate ranking (pocket_similarity/): multiple influenza A/B endonucleases score highly (e.g., 2W69, 6FS8, 6FS9) together with hantavirus entries (5IZE, 6Q99).
+
+2) Pharmacophore comparison (pharmacophore/pharmacophore_compare)
+- Shared kernel: 2× H‑bond acceptors (ACC) + 1× hydrophobe (HPH).
+- Triangle alignment RMSD (kernel): ~1.85 Å.
+- Type‑overlap score (multiplicity‑aware Jaccard): 0.30, reflecting broader feature differences.
+- Feature differences: ANDV pocket shows multiple donor/positive hotspots; influenza PA pocket emphasizes a negative/metal environment in co‑crystals.
+
+3) Cross‑target docking (analysis/)
+- Library: 248 compounds curated from influenza PA endonuclease chemotypes (ligands/ligands.sdf; CHEMBL‑mapped).
+- Docking results (AceDock):
+  • PA (6FS6) median score = −28.77; ANDV (6Q99) median = −21.89 (more negative is better).
+  • Median Δ (ANDV − PA) = +6.84; paired Wilcoxon p ≈ 5.7e‑41 (significant distribution shift).
+  • Despite shift, a meaningful subset performs well on both targets (analysis/dual_top_quartile.csv).
+- Interpretation: conserved kernel supports cross‑targetability for a subset; overall score shift likely reflects active‑site chemistry differences (notably metal usage and electrostatics).
+
+4) Active subset selection (potential drugs/active_subset.csv)
+- Criterion: ANDV docking score ≤ −25.0.
+- Result: 39 entries.
+- Metadata included: outlig ID, CHEMBL ID, SMILES, ANDV score, PA score, Δ.
+
+5) Analogue generation (potential drugs/active_subset_modified.csv)
+- Parents: top 20 by ANDV score from active_subset.csv.
+- Modifications (guided by maintaining the 2×ACC+HPH kernel while tuning periphery):
+  • F_scan: single fluorine additions at aromatic C–H positions.
+  • Me_scan: single methyl additions at aromatic C–H positions.
+  • N_walk: single heteroatom substitution (nitrogen walk) on aromatic rings.
+- Library size: 390 analogues.
+
+6) Developability and alert screening (potential drugs/*screened.csv and *safe.csv)
+- Structural alerts: RDKit FilterCatalog (PAINS A/B/C, Brenk, NIH).
+- Property window: 250 ≤ MW ≤ 550; 0.5 ≤ cLogP ≤ 4.5; 40 ≤ TPSA ≤ 130; HBD ≤ 3; HBA ≤ 8; RotB ≤ 8; aromatic rings ≤ 3.
+- Aggregation‑risk heuristic: cLogP > 3.5 with low polarity (TPSA < 60 or HBD+HBA < 4).
+- Results:
+  • Active subset (39 total) → 13 passed (active_subset_safe.csv).
+  • Modified analogues (390 total) → 155 passed (active_subset_modified_safe.csv).
+
+7) Toxicity‑focused heuristics (potential drugs/toxicity_*.csv; toxicity_summary.txt)
+- Heuristics applied on the “safe” sets:
+  • hERG risk (cationic amphiphile pattern: basic amine + cLogP ≥ 3 + ≥2 aromatic rings).
+  • Electrophile risk (Michael acceptor, aldehyde, epoxide, isothiocyanate).
+  • Redox/tox risk (catechol/quinone).
+  • Mutagenicity risk (nitro‑aromatic, azide, hydrazine, aniline).
+  • Azole/CYP risk (azole motif proxy for strong CYP inhibition).
+- Summary (toxicity_summary.txt):
+  • Active safe set (N=13): hERG risk 1 (7.7%); all other risks 0; overall toxicity_flag 1 (7.7%).
+  • Modified safe set (N=155): hERG risk 15 (9.7%); all other risks 0; overall toxicity_flag 15 (9.7%).
+- Deliverables:
+  • toxicity_active_hits.csv and toxicity_modified_hits.csv with per‑molecule flags and descriptors.
+
+8) What the findings mean
+- Evidence supports that some influenza PA endonuclease inhibitors are viable starting points for ANDV L endonuclease, consistent with shared pocket geometry and kernel pharmacophore.
+- A systematic potency gap in docking (median shift) suggests many PA chemotypes need tuning for ANDV’s local electrostatics/metal usage.
+- Safety‑first triage yields a practical short list (13 parents; 155 analogues) with low alert burden; a minority show hERG‑risk heuristics and should be deprioritized or redesigned (lower basicity/aromaticity or cLogP).
+
+9) Recommendations and next steps
+- Structure/physics refinement:
+  • Re‑dock ANDV with explicit Mn2+/Mg2+ and metal‑aware constraints (to fairly evaluate chelators).
+  • MD relax the ANDV pocket with realistic waters/metals; rescore promising sets (e.g., MM‑GBSA or FEP on finalists).
+- Medicinal chemistry directions:
+  • Maintain 2×ACC + 1×HPH kernel; adjust peripheral R‑groups to match ANDV donor/positive hotspots; modulate pKa/cLogP to reduce hERG risk.
+  • For flagged analogues, consider reducing cationic amphiphile character (fewer rings, attenuate basicity, add polarity).
+- Safety profiling:
+  • Run QSAR panels for Ames, hERG, CYP inhibition/induction, and solubility/permeability.
+  • Cross‑dock/selectivity against human nucleases/metalloenzymes to de‑risk metal‑binding liabilities.
+- Experimental plan:
+  • Biochemical endonuclease assay on the 13 active parents and top‑ranked analogues from the 155 modified‑safe list.
+  • If activity confirmed, SAR expansion around best scaffolds guided by pharmacophore and electrostatics maps.
+
+10) File inventory (this folder)
+- active_subset.csv: Predicted ANDV actives (≤ −25 score) with CHEMBL/SMILES.
+- active_subset_modified.csv: R‑group analogue library for top 20 parents (F/Me/N scans).
+- active_subset_screened.csv and active_subset_safe.csv: Property/alert screens and passers.
+- active_subset_modified_screened.csv and active_subset_modified_safe.csv: Screens and passers for analogues.
+- toxicity_active_hits.csv and toxicity_modified_hits.csv: Toxicity heuristic flags and descriptors.
+- toxicity_summary.txt: Aggregate toxicity metrics.
+
+Contact/automation
+- I can: (a) re‑dock safe sets with explicit metals and constraints; (b) add QSAR panels; (c) prepare MD refinement and rescoring; (d) generate a final ranked “clean_to_test” list.

@@ -1,0 +1,6 @@
+object,chain,resid_start,resid_end,color_hex,style,selection,notes
+N-lobe,A,1,34,#00c8ff,cartoon,"protein and chain A and resid 1 to 34",N-terminal lobe at entrance of RNA channel
+Catalytic core,A,35,130,#ff8c00,cartoon,"protein and chain A and resid 35 to 130",H-PD-D/E-K metal-dependent catalytic region
+C-lobe,A,131,199,#d500f9,cartoon,"protein and chain A and resid 131 to 199",C-terminal helical lobe opposite wall of groove
+Pocket-lining,A,112,114,#ff4d4d,licorice,"chain A and resid 112 to 114 and noh",Residues within ~5 Å of top pocket center
+Metals,A,301,302,#2ecc71,spheres,"resname MN3 or name MN",Mn2+ ions in active site (HETATM indices A 301–302)

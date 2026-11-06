@@ -1,0 +1,55 @@
+Relationship mapping between Influenza PA endonuclease (6FS6) and Andes virus L endonuclease NTD (6Q99)
+
+Structures and pocket definitions
+- 6FS6: Influenza A PA endonuclease with inhibitor (baloxavir acid/BXA) bound. Pocket center derived from BXA centroid.
+  • BXA-pocket center: [18.0836, 94.9066, 43.9247] (templates/6FS6_bxa_center.sdf)
+- 6Q99: Andes orthohantavirus L protein N-terminus (endonuclease domain; mutant K124A). Pocket 1 center from DeepSite.
+  • DeepSite pocket 1 center: [171.08, 155.54, 97.44] (pharmacophore/6Q99_pocket1_center.csv)
+
+Pharmacophore comparison (6 Å radius)
+- Shared kernel: 2 hydrogen-bond acceptors (ACC) + 1 hydrophobe (HPH).
+- Type overlap (multiplicity-aware Jaccard): 0.30
+- Local geometry: 2×ACC + 1×HPH triangle alignment RMSD = 1.849 Å
+  Files: pharmacophore_compare/summary.txt, pharmacophore_compare/triangle_rmsd.txt
+
+Active-site chemistry and residues near pocket centers (≤10 Å)
+- 6FS6 (PA endonuclease):
+  • Pocket residues (examples): ALA17, ALA20, MET21, TYR24, LYS34, ALA37, ILE38, HIE41, LEU42, GLU80, LEU106, GLY121, GLU198 (see analysis/active_site/fs6_pocket_residues.csv for full list).
+  • Metal cluster detected: Mn ions with canonical acidic coordination.
+    - Mn A:901 ↔ ASP108 OD2 (2.14 Å), GLU119 OE2 (2.31 Å), ILE120 O (2.09 Å)
+    - Mn A:902 ↔ GLU80 OE1 (2.38 Å), ASP108 OD1 (2.04 Å)
+    (Symmetry-related chains show analogous contacts.)
+  • File with all contacts: analysis/active_site/fs6_metal_coordination.csv
+- 6Q99 (Andes L endonuclease NTD):
+  • Pocket residues (examples): TYR32, ALA33, VAL34, ARG35, HIP36, ASP37, VAL111, THR112, VAL113, THR114, ALA115, ASP116, VAL117, GLY120, ILE121, GLU123, ALA160, VAL161, LYS162, THR163 (see analysis/active_site/q99_pocket_residues.csv).
+  • No metal coordination detected within 2.6 Å in the prepared 6Q99 structure (analysis/active_site/q99_metal_coordination.csv).
+
+Cross-target docking comparison (AceDock; 248 ligands)
+- N common ligands: 248
+- Median docking score (more negative is better):
+  • 6FS6: -28.77
+  • 6Q99: -21.89
+  • Median Δ (6Q99 − 6FS6): +6.84
+- Paired Wilcoxon signed-rank test: p = 5.71e-41 (significant difference)
+- Dual-top-quartile ligands listed in analysis/dual_top_quartile.csv
+  Files: analysis/summary.csv, analysis/merged_scores.csv
+
+Structural classification and sequence relatedness (initial checks)
+- 6FS6 CATH (PDBe mapping): 3.40.91.90 – Alpha-Beta; 3-Layer(aba) Sandwich; Topology: Restriction Endonuclease; Homology: Influenza PA endonuclease domain.
+- 6Q99: No CATH mapping returned via PDBe endpoint at query time.
+- Coarse global alignment (PDB-derived chains): aligned length ≈ 191 aa with ≈ 33.5% identity (indicative but not definitive). Robust exclusion of homology requires profile–profile HMMs.
+  FASTAs prepared: analysis/sequences/6FS6_chainE.fasta, analysis/sequences/6Q99_chainA.fasta
+
+Interpretation
+- The two endonucleases share a similar local pharmacophore kernel (2×ACC + 1×HPH) with close spatial agreement (RMSD ~1.85 Å), supporting analogous functional constraints at the pocket.
+- The influenza PA pocket includes a metal cluster with acidic coordination; the Andes pocket shows multiple donor/positive features and no metal detected in the prepared structure. This indicates different chemical implementations achieving related functional roles (consistent with convergence at the active-site pharmacophore), but homology is not excluded by current data.
+
+Figures (viewer snapshots)
+- Overlapped pharmacophores (typed colors): screenshots/overlap_pharmacophore_colored.png
+- Overlapped proteins at the pocket: screenshots/proteins_overlapped_pocket.png
+
+Next steps (to strengthen a convergent-evolution argument)
+1) Run HHblits/HHsearch on the domain FASTAs to quantify remote homology (report probability and E-values). Non-significant hits support convergence; significant hits indicate homology.
+2) Retrieve SCOPe/CATH assignments for 6Q99 and reconfirm 6FS6; different superfamily/fold assignments would support convergence despite similar pocket geometry.
+3) Generate a labeled active-site figure: show pocket residues (sticks), feature pseudo-atoms, and metal–ligand distances (6FS6) for publication.
+4) Optional: backbone pocket RMSD after feature-based superposition to quantify local structural similarity independent of whole-protein differences.

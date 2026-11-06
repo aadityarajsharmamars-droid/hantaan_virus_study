@@ -1,0 +1,951 @@
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is /workspace/scratch/run_12_05_2026_06_47_41315020/protein_prepared.pdb)
+
+1 molecule converted
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbcavity ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbcavity.cxx#3 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:47:30 2026
+***********************************************
+
+Command line arguments:
+-r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+-was
+-d
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+
+MAPPER
+CLASS	RbtLigandSiteMapper
+ENABLED	TRUE
+GRIDSTEP	0.5
+MAX_CAVITIES	1
+MIN_VOLUME	100
+NAME	MAPPER
+RADIUS	8
+REF_MOL	/workspace/run_12_05_2026_06_47_41315020/pocket1_center_template.sdf
+SMALL_SPHERE	1.5
+TRACE	0
+VOL_INCR	0.0
+
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+Cav = 5588; total = 5588
+Geo center: [171.08 155.54  97.44]
+FILE EXT .pdb
+RDock parameters: 
+	rbcavity: rbcavity
+	rbdock: rbdock
+	rdsort: sdsort
+	jobname: .
+	protmol2: /workspace/scratch/run_12_05_2026_06_47_41315020/protein_prepared.mol2
+	radius: 8
+	centroid: 171.08,155.54,97.44
+	mode: SOLV
+	templatefolder: /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates
+	scratchdir: /workspace/scratch/run_12_05_2026_06_47_41315020
+
+  0%|          | 0/13 [00:00<?, ?it/s]
+100%|██████████| 13/13 [00:00<00:00, 125059.52it/s]
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:47:33 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_0.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_0
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL5612919
+RANDOM_NUMBER_SEED:           1778568453
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:47:38 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_1.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_1
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4438546
+RANDOM_NUMBER_SEED:           1778568458
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:47:47 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_2.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_2
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL2040580
+RANDOM_NUMBER_SEED:           1778568467
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:47:56 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_3.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_3
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4532507
+RANDOM_NUMBER_SEED:           1778568476
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:48:02 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_4.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_4
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL2040575
+RANDOM_NUMBER_SEED:           1778568482
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:48:11 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_5.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_5
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4460007
+RANDOM_NUMBER_SEED:           1778568491
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:48:19 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_6.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_6
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL2040578
+RANDOM_NUMBER_SEED:           1778568499
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:48:28 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_7.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_7
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL2040581
+RANDOM_NUMBER_SEED:           1778568508
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:48:37 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_8.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_8
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4439208
+RANDOM_NUMBER_SEED:           1778568517
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:48:53 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_9.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_9
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL2040574
+RANDOM_NUMBER_SEED:           1778568533
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:49:02 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_10.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_10
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4469214
+RANDOM_NUMBER_SEED:           1778568542
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:49:09 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_11.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_11
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4474376
+RANDOM_NUMBER_SEED:           1778568549
+
+END OF RUN
+***********************************************
+The rDock program is licensed under GNU-LGPLv3.0. http://rdock.sourceforge.net/
+Executable:	rbdock ($Id: //depot/dev/client3/rdock/2021.1/src/exe/rbdock.cxx#4 $)
+Library:	libRbt.so/2021.1/901 2021/07/19
+RBT_ROOT:	/app/.pixi/envs/base/share/rdock-2022.0+4-1
+RBT_HOME:	/workspace
+Current dir:	/workspace
+Date:		Tue May 12 06:49:20 2026
+***********************************************
+
+
+Command line args:
+ -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_12.sdf
+ -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+ -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+ -o output_lig_12
+ -n 10
+ -cont 
+ -t 99999
+Reading polar hydrogens only from ligand SD file
+
+Lower target intermolecular score = 99999
+
+DOCKING PROTOCOL:
+/app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf
+Benchmark (with SOLVATION, indexed VDW)
+
+RECEPTOR:
+/workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm
+.
+
+DOCKING SITE
+Total volume 698.5 A^3
+Cavity #1	Size=5588 points; Vol=698.5 A^3; Min=(166.5,149,94); Max=(178.5,163,105); Center=(172.803,156.145,99.6735); Extent=(12,14,11)
+
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: INFO Attempting to identify element by 1st 2 chars of FFType string: Mn
+RbtMOL2FileSource: INFO Atomic number = 25
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3301:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_3302:MN
+RbtMOL2FileSource: WARNING Undefined Tripos type for UNK:MN_901:MN
+RbtSAIdxSF: WARNING - CANNOT ASSIGN SOLVATION ATOM TYPE FOR UNK:ALA_115:H
+
+No solvent
+
+------------- Terminate filter 0------------
+
+if (SCORE.NRUNS - 9 ) > 0 then
+	0.0 
+else
+	-1.0 
+end
+
+------------- Write filter -----------------
+(SCORE.INTER - 99999 )
+
+**************************************************
+RECORD #1
+NAME:   CHEMBL4531327
+RANDOM_NUMBER_SEED:           1778568560
+
+END OF RUN
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_0.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_0.sdf -o output_lig_0 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_1.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_1.sdf -o output_lig_1 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_2.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_2.sdf -o output_lig_2 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_3.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_3.sdf -o output_lig_3 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_4.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_4.sdf -o output_lig_4 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_5.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_5.sdf -o output_lig_5 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_6.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_6.sdf -o output_lig_6 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_7.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_7.sdf -o output_lig_7 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_8.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_8.sdf -o output_lig_8 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_9.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_9.sdf -o output_lig_9 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_10.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_10.sdf -o output_lig_10 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_11.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_11.sdf -o output_lig_11 -n 10 -t 99999 -cont
+Docking /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_12.sdf started
+rbdock -r /workspace/scratch/run_12_05_2026_06_47_41315020/rdock-grid.prm -p /app/.pixi/envs/base/lib/python3.10/site-packages/acedock/templates/RDOCK-SOLV.conf -i /workspace/scratch/run_12_05_2026_06_47_41315020/input_lig_12.sdf -o output_lig_12 -n 10 -t 99999 -cont
+Docking completed. 13/13
+Checking licence for AceDock 1
+# Licence:
+#   Product: AceDock 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid

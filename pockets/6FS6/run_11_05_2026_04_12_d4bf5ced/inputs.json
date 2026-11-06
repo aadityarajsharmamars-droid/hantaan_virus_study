@@ -1,0 +1,13 @@
+{
+    "function": "kdeep.apps.deepsite.app.main",
+    "slpm_path": "deepsite.v1.deepsite",
+    "arguments": {
+        "model": "app://files/datasets/model_98acc.ckpt",
+        "pdbfile": null,
+        "pdbid": "6FS6",
+        "no_parallelism": false,
+        "no_gpu": false,
+        "outdir": ".",
+        "scratchdir": "./scratch"
+    }
+}

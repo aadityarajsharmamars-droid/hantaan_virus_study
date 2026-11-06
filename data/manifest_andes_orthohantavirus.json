@@ -1,0 +1,81 @@
+{
+  "uniprot": {
+    "metadata_csv": "uniprot/andes_orthohantavirus_uniprot_metadata.csv",
+    "fasta": "uniprot/andes_orthohantavirus_uniprot.fasta",
+    "count_entries": 266
+  },
+  "ncbi": {
+    "metadata_csv": "ncbi/andes_orthohantavirus_ncbi_metadata.csv",
+    "fasta": "ncbi/andes_orthohantavirus_ncbi.fasta",
+    "count_entries": 777
+  },
+  "pdb": {
+    "downloaded": [
+      {
+        "pdb_id": "2K48",
+        "path": "pdb/2K48_assembly1.pdb"
+      },
+      {
+        "pdb_id": "2K9H",
+        "path": "pdb/2K9H_assembly1.pdb"
+      },
+      {
+        "pdb_id": "5E04",
+        "path": "pdb/5E04_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6Q99",
+        "path": "pdb/6Q99_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6Y5F",
+        "path": "pdb/6Y5F_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6Y5W",
+        "path": "pdb/6Y5W_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6Y6Q",
+        "path": "pdb/6Y6Q_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6YRB",
+        "path": "pdb/6YRB_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6YRQ",
+        "path": "pdb/6YRQ_assembly1.pdb"
+      },
+      {
+        "pdb_id": "6ZJM",
+        "path": "pdb/6ZJM_assembly1.pdb"
+      },
+      {
+        "pdb_id": "8DBZ",
+        "path": "pdb/8DBZ_assembly1.pdb"
+      },
+      {
+        "pdb_id": "9P3I",
+        "path": "pdb/9P3I.cif"
+      },
+      {
+        "pdb_id": "9P3L",
+        "path": "pdb/9P3L.cif"
+      },
+      {
+        "pdb_id": "9P3M",
+        "path": "pdb/9P3M.cif"
+      },
+      {
+        "pdb_id": "9P3X",
+        "path": "pdb/9P3X.cif"
+      },
+      {
+        "pdb_id": "9P3Y",
+        "path": "pdb/9P3Y.cif"
+      }
+    ],
+    "metadata_csv": "pdb/pdb_metadata.csv"
+  }
+}

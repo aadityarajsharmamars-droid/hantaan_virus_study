@@ -1,0 +1,9 @@
+,0
+n_features_1,4
+n_features_2,9
+has_POS_1,False
+has_POS_2,True
+has_NEG_1,True
+has_NEG_2,False
+has_MET_1,False
+has_MET_2,False

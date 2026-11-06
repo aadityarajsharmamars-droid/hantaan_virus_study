@@ -1,0 +1,5 @@
+{
+    "output.cube": "The predicted binding site probabilities as isosurface in cube format",
+    "output.pdb": "A structure on which to visualize the isosurface",
+    "output.csv": "A CSV file with the main binding site centers and their scores"
+}

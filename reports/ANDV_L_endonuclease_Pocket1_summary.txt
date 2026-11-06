@@ -1,0 +1,29 @@
+Target: Andes orthohantavirus L endonuclease (PDB: 6Q99)
+Pocket: DeepSite Pocket 1
+Pocket center (A): x=171.08, y=155.54, z=97.44
+Selection sphere radius: 6.0 A
+
+Residues within 6.0 A (sorted by distance):
+  VAL A113  d=2.55 A
+  THR A112  d=3.15 A
+  THR A114  d=3.72 A
+  HIS A36  d=5.43 A
+  ARG A35  d=5.88 A
+
+Nearby hetero groups (non-water) within 6.0 A:
+  GOL A303  d=4.34 A
+
+Pocket environment summary (approx):
+  Residue count: 5
+  Composition:
+    Charged+: 0.20, Charged-: 0.00
+    Polar: 0.60, Hydrophobic: 0.20, Aromatic: 0.00
+  Metal-binding residues present: {'HIS': 1}
+  Mean hydropathy (Kyte-Doolittle): -0.98
+  Net charge estimate (Asp/Glu=-1, Lys/Arg=+1): +1
+  H-bond donors: 4, acceptors: 3
+
+Files:
+  Screenshot: screenshots/andv_L_endonuclease_pocket1.png
+  Residue list CSV: reports/ANDV_L_endonuclease_Pocket1_residues.csv
+  Hetero list CSV: reports/ANDV_L_endonuclease_Pocket1_hetero.csv

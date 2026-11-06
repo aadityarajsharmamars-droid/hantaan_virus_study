@@ -1,0 +1,4 @@
+viewer_files/6Q99_ph4_DON.sdf
+viewer_files/6Q99_ph4_ACC.sdf
+viewer_files/6Q99_ph4_POS.sdf
+viewer_files/6Q99_ph4_HPH.sdf

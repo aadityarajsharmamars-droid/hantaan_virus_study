@@ -1,0 +1,4 @@
+Used tips: ['Influenza_A_PB1', 'Influenza_B_PB1', 'Influenza_C_PB1', 'Quaranfil_virus_PB1', 'Andes_orthohantavirus_L']
+Slope (rate, arb. units/year): -0.0003224076068869758
+Intercept: 1.6339571268045923
+Estimated root time (year): 5067.985655119475

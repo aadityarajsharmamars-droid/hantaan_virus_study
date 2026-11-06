@@ -1,0 +1,53 @@
+Project: Andes orthohantavirus vs Influenza A – closest common ancestor and time calibration across 40 viruses
+
+Summary
+- Closest taxonomic common ancestor: Negarnaviricota (phylum of negative-sense RNA viruses).
+- Andes virus lineage: Bunyavirales → Hantaviridae → Andes orthohantavirus.
+- Influenza A lineage: Articulavirales → Orthomyxoviridae → Influenza A virus.
+- Functional/domain ancestry: Both encode homologous replication/transcription modules with (i) a cap‑snatching endonuclease at the N-terminus (PA in influenza; N-terminus of L in hantaviruses) and (ii) an RdRp with canonical catalytic motifs (H/PD-D/E-K motif in the endonuclease; A–C motifs in the polymerase). These features support a deep shared origin within Negarnaviricota.
+
+Data assembled on server
+- Taxonomy (NCBI Taxonomy) for all 40 query viruses: domain_phylogeny/taxonomy_all.csv
+- BEAST2-ready package (protein alignment, tipdates, and arthropod host-based node priors): beast2_inputs/
+  - rdRp_aligned.nexus (polymerase sequences, amino acids)
+  - tipdates.tsv (sampling years extracted where available)
+  - calibrations.md (three broad MRCA priors: tick-borne orthomyxoviruses; Nairoviridae split; Tospoviridae vs mosquito-borne lineage). These are soft, wide priors intended for deep-time analysis.
+- UniProt-based polymerase phylogeny (earlier runs): expanded RdRp trees show Orthomyxoviridae and Bunyavirales as well-supported, separate clades meeting at a deep node.
+
+Methods (what was run here)
+1) Taxonomy retrieval (NCBI E-utilities): created a lineage table for the 40 viruses.
+2) Polymerase-domain phylogeny (previous server runs): MAFFT alignment of PB1 (influenza) and L (bunyaviruses) with outgroups; Neighbor-Joining tree; exploratory root-to-tip regression indicated weak or absent temporal signal across deep divergences (as expected).
+3) Time-calibration inputs: Prepared BEAST2 inputs for a relaxed-clock, amino-acid model with soft, arthropod-based calibrations.
+
+Interpretation
+- Taxonomy: Andes (Bunyavirales) and Influenza A (Articulavirales) diverge at the class level within Negarnaviricota. Thus, the closest taxonomic common ancestor is Negarnaviricota.
+- Domain phylogeny: Influenza PB1/PA and Hantavirus L endonuclease/RdRp cluster within their respective orders and only connect at a deep ancestral node, consistent with an ancient split among segmented negative-sense RNA viruses.
+- Structural/functional: The cap-snatching endonuclease pocket (metal-dependent H–PD–D/E–K motif) and the RdRp active site are conserved in chemistry and geometry despite low global sequence identity, indicating retention of an ancestral catalytic architecture.
+
+Time calibration for all 40 viruses
+- Deep divergence and limited dated tips mean strict tip-dating is not informative on its own. A relaxed molecular clock with node calibrations is required.
+- Provided BEAST2 configuration guidance (beast2_inputs/calibrations.md):
+  - Site model: WAG + Gamma(4) + empirical AA frequencies.
+  - Clock: Uncorrelated Log-Normal (UCLN).
+  - Tree prior: Yule or Birth–Death.
+  - MRCA priors (soft, wide):
+    1) Tick-borne orthomyxoviruses (Thogotovirus + Quaranfil): LogNormal with 90 Ma offset (tick fossil minimum), broad variance.
+    2) Nairoviridae (tick-borne) split within Bunyavirales: LogNormal with 250 Ma offset (chelicerate–insect divergence soft minimum), broad variance.
+    3) Tospoviridae (thrips/plant) vs mosquito-borne Peribunya/Phenu: LogNormal with 100 Ma offset, broad variance.
+- Expected outcome: The Andes–Influenza split should resolve far earlier than any within-order splits, placing their MRCA deep in Negarnaviricota; credible intervals will be wide due to deep time and calibration uncertainty.
+
+What remains to obtain absolute times
+- Run BEAST2 locally or on an HPC with the provided inputs:
+  1) Load rdRp_aligned.nexus in BEAUti (Amino Acids).
+  2) Add tipdates.tsv (only some taxa have years; others remain undated).
+  3) Define the three MRCA taxon sets and apply the priors from calibrations.md.
+  4) Use UCLN clock, WAG+G+F site model, Yule prior.
+  5) Run long MCMC (e.g., 50M states). Check convergence in Tracer (ESS > 200).
+  6) Summarize with TreeAnnotator; visualize the MCC tree; read node ages (with HPD) for the Andes–Influenza joining node.
+
+Decision rule (applied)
+- Closest taxonomic common ancestor: Negarnaviricota.
+- Closest functional/domain ancestor: Ancestral Negarnaviricota-like negative-sense RNA virus with cap‑snatching endonuclease and RdRp polymerase.
+
+Limitations
+- The server environment lacks TrimAl, IQ-TREE 2, and BEAST2; thus, exact time estimates are not computed here. Provided inputs are ready for off-server execution. The deep-time calibration relies on debated host-association priors; sensitivity analyses with alternative priors/partitions are recommended.

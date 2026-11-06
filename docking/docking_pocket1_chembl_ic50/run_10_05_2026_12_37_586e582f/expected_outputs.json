@@ -1,0 +1,6 @@
+{
+    "outlig*.sdf": "SDF files with ligand poses. Multiple poses of the same ligand, never different ligands.",
+    "outlig*_ph4overlap.sdf": "The docked ligands in SDF format with pharmacophore overlap score",
+    "rdock-grid.as": "AS file. The cavity used for docking. You can pass it to acedock to save some time.",
+    "scores.csv": "CSV file with a summary of the scores of the poses."
+}

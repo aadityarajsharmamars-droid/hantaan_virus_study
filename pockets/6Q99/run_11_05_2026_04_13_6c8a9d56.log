@@ -1,0 +1,249 @@
+2026-05-11 04:13:56,640 - matplotlib.font_manager - INFO - generated new fontManager
+2026-05-11 04:14:02,328 - kdeep.apps.deepsite.app - INFO - Preparing protein
+2026-05-11 04:14:02,329 - kdeep.deprecated.deepsite.datapreparation - INFO - Missing 1 prepared proteins
+
+Preparing proteins:   0%|          | 0/1 [00:00<?, ?it/s]
+Preparing proteins: 100%|██████████| 1/1 [00:00<00:00, 307.70it/s]
+2026-05-11 04:14:07,566 - moleculekit.tools.preparation - WARNING - Dubious protonation state: the pKa of 2 residues is within 1.0 units of pH 7.4.
+2026-05-11 04:14:07,566 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS     8 A (pKa= 6.74)
+2026-05-11 04:14:07,567 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   137 A (pKa= 6.43)
+2026-05-11 04:14:07,764 - kdeep.apps.deepsite.app - INFO - Calculating evaluation channels
+2026-05-11 04:14:07,769 - kdeep.deprecated.deepsite.datapreparation - INFO - Missing 1 precomputed npz files
+
+Computing protein channels:   0%|          | 0/1 [00:00<?, ?it/s]
+Computing protein channels: 100%|██████████| 1/1 [00:00<00:00, 1608.86it/s]
+2026-05-11 04:14:10,595 - moleculekit.molecule - INFO - Removed 5 atoms. 3250 atoms remaining in the molecule.
+
+Computing ligand channels:   0%|          | 0/1 [00:00<?, ?it/s]
+Computing ligand channels: 100%|██████████| 1/1 [00:00<00:00, 1619.42it/s]
+2026-05-11 04:14:14,083 - kdeep.deprecated.deepsite.datapreparation - ERROR - Could not find ligand file at: 
+
+Computing final channels:   0%|          | 0/1 [00:00<?, ?it/s]
+Computing final channels: 100%|██████████| 1/1 [00:00<00:00, 1560.96it/s]
+2026-05-11 04:14:16,780 - kdeep.apps.deepsite.app - INFO - Loading model for evaluation /app/files/datasets/model_98acc.ckpt
+2026-05-11 04:14:16,781 - kdeep.apps.deepsite.app - INFO - Evaluating protein
+
+Evaluating rotation 1/4:   0%|          | 0/60 [00:00<?, ?it/s]
+Evaluating rotation 1/4:   2%|▏         | 1/60 [00:01<01:05,  1.12s/it]
+Evaluating rotation 1/4:   8%|▊         | 5/60 [00:01<00:14,  3.70it/s]
+Evaluating rotation 1/4:  12%|█▏        | 7/60 [00:01<00:11,  4.66it/s]
+Evaluating rotation 1/4:  15%|█▌        | 9/60 [00:02<00:14,  3.54it/s]
+Evaluating rotation 1/4:  18%|█▊        | 11/60 [00:02<00:11,  4.26it/s]
+Evaluating rotation 1/4:  22%|██▏       | 13/60 [00:03<00:13,  3.40it/s]
+Evaluating rotation 1/4:  25%|██▌       | 15/60 [00:03<00:10,  4.26it/s]
+Evaluating rotation 1/4:  28%|██▊       | 17/60 [00:04<00:12,  3.53it/s]
+Evaluating rotation 1/4:  32%|███▏      | 19/60 [00:04<00:09,  4.50it/s]
+Evaluating rotation 1/4:  35%|███▌      | 21/60 [00:05<00:10,  3.73it/s]
+Evaluating rotation 1/4:  37%|███▋      | 22/60 [00:05<00:09,  4.11it/s]
+Evaluating rotation 1/4:  40%|████      | 24/60 [00:06<00:08,  4.24it/s]
+Evaluating rotation 1/4:  42%|████▏     | 25/60 [00:06<00:09,  3.54it/s]
+Evaluating rotation 1/4:  43%|████▎     | 26/60 [00:07<00:09,  3.52it/s]
+Evaluating rotation 1/4:  47%|████▋     | 28/60 [00:07<00:08,  3.97it/s]
+Evaluating rotation 1/4:  48%|████▊     | 29/60 [00:07<00:09,  3.34it/s]
+Evaluating rotation 1/4:  50%|█████     | 30/60 [00:08<00:07,  3.93it/s]
+Evaluating rotation 1/4:  53%|█████▎    | 32/60 [00:08<00:05,  4.74it/s]
+Evaluating rotation 1/4:  55%|█████▌    | 33/60 [00:09<00:09,  2.98it/s]
+Evaluating rotation 1/4:  58%|█████▊    | 35/60 [00:09<00:06,  3.82it/s]
+Evaluating rotation 1/4:  62%|██████▏   | 37/60 [00:10<00:07,  3.02it/s]
+Evaluating rotation 1/4:  65%|██████▌   | 39/60 [00:10<00:05,  3.79it/s]
+Evaluating rotation 1/4:  68%|██████▊   | 41/60 [00:11<00:06,  3.08it/s]
+Evaluating rotation 1/4:  73%|███████▎  | 44/60 [00:11<00:03,  4.86it/s]
+Evaluating rotation 1/4:  77%|███████▋  | 46/60 [00:12<00:03,  3.87it/s]
+Evaluating rotation 1/4:  80%|████████  | 48/60 [00:12<00:02,  4.50it/s]
+Evaluating rotation 1/4:  82%|████████▏ | 49/60 [00:13<00:02,  3.75it/s]
+Evaluating rotation 1/4:  87%|████████▋ | 52/60 [00:13<00:01,  4.27it/s]
+Evaluating rotation 1/4:  88%|████████▊ | 53/60 [00:13<00:01,  4.36it/s]
+Evaluating rotation 1/4:  93%|█████████▎| 56/60 [00:14<00:00,  4.60it/s]
+Evaluating rotation 1/4:  95%|█████████▌| 57/60 [00:14<00:00,  4.89it/s]
+Evaluating rotation 1/4: 100%|██████████| 60/60 [00:15<00:00,  5.09it/s]
+Evaluating rotation 1/4: 100%|██████████| 60/60 [00:15<00:00,  3.95it/s]
+
+Evaluating rotation 2/4:   0%|          | 0/60 [00:00<?, ?it/s]
+Evaluating rotation 2/4:   2%|▏         | 1/60 [00:00<00:55,  1.06it/s]
+Evaluating rotation 2/4:   8%|▊         | 5/60 [00:01<00:18,  2.98it/s]
+Evaluating rotation 2/4:  12%|█▏        | 7/60 [00:02<00:13,  3.88it/s]
+Evaluating rotation 2/4:  15%|█▌        | 9/60 [00:03<00:17,  2.96it/s]
+Evaluating rotation 2/4:  18%|█▊        | 11/60 [00:03<00:12,  3.84it/s]
+Evaluating rotation 2/4:  22%|██▏       | 13/60 [00:04<00:15,  2.96it/s]
+Evaluating rotation 2/4:  25%|██▌       | 15/60 [00:04<00:11,  3.96it/s]
+Evaluating rotation 2/4:  28%|██▊       | 17/60 [00:05<00:13,  3.21it/s]
+Evaluating rotation 2/4:  33%|███▎      | 20/60 [00:05<00:08,  4.70it/s]
+Evaluating rotation 2/4:  35%|███▌      | 21/60 [00:06<00:11,  3.44it/s]
+Evaluating rotation 2/4:  37%|███▋      | 22/60 [00:06<00:10,  3.70it/s]
+Evaluating rotation 2/4:  40%|████      | 24/60 [00:06<00:08,  4.14it/s]
+Evaluating rotation 2/4:  42%|████▏     | 25/60 [00:07<00:09,  3.63it/s]
+Evaluating rotation 2/4:  43%|████▎     | 26/60 [00:07<00:09,  3.52it/s]
+Evaluating rotation 2/4:  47%|████▋     | 28/60 [00:07<00:07,  4.30it/s]
+Evaluating rotation 2/4:  48%|████▊     | 29/60 [00:08<00:08,  3.56it/s]
+Evaluating rotation 2/4:  50%|█████     | 30/60 [00:08<00:07,  4.10it/s]
+Evaluating rotation 2/4:  53%|█████▎    | 32/60 [00:08<00:05,  5.07it/s]
+Evaluating rotation 2/4:  55%|█████▌    | 33/60 [00:09<00:08,  3.10it/s]
+Evaluating rotation 2/4:  58%|█████▊    | 35/60 [00:09<00:05,  4.26it/s]
+Evaluating rotation 2/4:  62%|██████▏   | 37/60 [00:10<00:07,  3.04it/s]
+Evaluating rotation 2/4:  68%|██████▊   | 41/60 [00:11<00:05,  3.45it/s]
+Evaluating rotation 2/4:  75%|███████▌  | 45/60 [00:12<00:04,  3.75it/s]
+Evaluating rotation 2/4:  80%|████████  | 48/60 [00:12<00:02,  5.03it/s]
+Evaluating rotation 2/4:  82%|████████▏ | 49/60 [00:13<00:02,  3.96it/s]
+Evaluating rotation 2/4:  87%|████████▋ | 52/60 [00:13<00:01,  4.85it/s]
+Evaluating rotation 2/4:  88%|████████▊ | 53/60 [00:14<00:01,  4.38it/s]
+Evaluating rotation 2/4:  90%|█████████ | 54/60 [00:14<00:01,  4.39it/s]
+Evaluating rotation 2/4:  93%|█████████▎| 56/60 [00:14<00:00,  5.50it/s]
+Evaluating rotation 2/4:  95%|█████████▌| 57/60 [00:14<00:00,  4.80it/s]
+Evaluating rotation 2/4:  97%|█████████▋| 58/60 [00:14<00:00,  5.04it/s]
+Evaluating rotation 2/4: 100%|██████████| 60/60 [00:15<00:00,  6.83it/s]
+Evaluating rotation 2/4: 100%|██████████| 60/60 [00:15<00:00,  3.98it/s]
+
+Evaluating rotation 3/4:   0%|          | 0/60 [00:00<?, ?it/s]
+Evaluating rotation 3/4:   2%|▏         | 1/60 [00:00<00:49,  1.18it/s]
+Evaluating rotation 3/4:   8%|▊         | 5/60 [00:01<00:16,  3.28it/s]
+Evaluating rotation 3/4:  12%|█▏        | 7/60 [00:01<00:12,  4.23it/s]
+Evaluating rotation 3/4:  15%|█▌        | 9/60 [00:02<00:15,  3.24it/s]
+Evaluating rotation 3/4:  18%|█▊        | 11/60 [00:03<00:12,  3.86it/s]
+Evaluating rotation 3/4:  22%|██▏       | 13/60 [00:03<00:14,  3.24it/s]
+Evaluating rotation 3/4:  25%|██▌       | 15/60 [00:04<00:11,  3.93it/s]
+Evaluating rotation 3/4:  28%|██▊       | 17/60 [00:04<00:12,  3.42it/s]
+Evaluating rotation 3/4:  32%|███▏      | 19/60 [00:05<00:09,  4.20it/s]
+Evaluating rotation 3/4:  35%|███▌      | 21/60 [00:05<00:10,  3.76it/s]
+Evaluating rotation 3/4:  37%|███▋      | 22/60 [00:06<00:09,  4.13it/s]
+Evaluating rotation 3/4:  38%|███▊      | 23/60 [00:06<00:07,  4.68it/s]
+Evaluating rotation 3/4:  40%|████      | 24/60 [00:06<00:08,  4.25it/s]
+Evaluating rotation 3/4:  42%|████▏     | 25/60 [00:06<00:09,  3.65it/s]
+Evaluating rotation 3/4:  43%|████▎     | 26/60 [00:07<00:09,  3.64it/s]
+Evaluating rotation 3/4:  47%|████▋     | 28/60 [00:07<00:07,  4.50it/s]
+Evaluating rotation 3/4:  48%|████▊     | 29/60 [00:07<00:08,  3.47it/s]
+Evaluating rotation 3/4:  50%|█████     | 30/60 [00:08<00:07,  4.07it/s]
+Evaluating rotation 3/4:  52%|█████▏    | 31/60 [00:08<00:07,  4.08it/s]
+Evaluating rotation 3/4:  55%|█████▌    | 33/60 [00:09<00:08,  3.22it/s]
+Evaluating rotation 3/4:  58%|█████▊    | 35/60 [00:09<00:06,  3.88it/s]
+Evaluating rotation 3/4:  62%|██████▏   | 37/60 [00:10<00:07,  3.28it/s]
+Evaluating rotation 3/4:  65%|██████▌   | 39/60 [00:10<00:05,  3.95it/s]
+Evaluating rotation 3/4:  68%|██████▊   | 41/60 [00:11<00:05,  3.47it/s]
+Evaluating rotation 3/4:  72%|███████▏  | 43/60 [00:11<00:04,  4.13it/s]
+Evaluating rotation 3/4:  75%|███████▌  | 45/60 [00:12<00:03,  3.85it/s]
+Evaluating rotation 3/4:  78%|███████▊  | 47/60 [00:12<00:02,  4.65it/s]
+Evaluating rotation 3/4:  82%|████████▏ | 49/60 [00:12<00:02,  4.20it/s]
+Evaluating rotation 3/4:  85%|████████▌ | 51/60 [00:13<00:01,  4.94it/s]
+Evaluating rotation 3/4:  87%|████████▋ | 52/60 [00:13<00:01,  4.84it/s]
+Evaluating rotation 3/4:  88%|████████▊ | 53/60 [00:13<00:01,  4.23it/s]
+Evaluating rotation 3/4:  90%|█████████ | 54/60 [00:13<00:01,  4.53it/s]
+Evaluating rotation 3/4:  93%|█████████▎| 56/60 [00:14<00:00,  5.07it/s]
+Evaluating rotation 3/4:  95%|█████████▌| 57/60 [00:14<00:00,  4.44it/s]
+Evaluating rotation 3/4:  98%|█████████▊| 59/60 [00:14<00:00,  5.31it/s]
+Evaluating rotation 3/4: 100%|██████████| 60/60 [00:14<00:00,  4.03it/s]
+
+Evaluating rotation 4/4:   0%|          | 0/60 [00:00<?, ?it/s]
+Evaluating rotation 4/4:   2%|▏         | 1/60 [00:00<00:52,  1.12it/s]
+Evaluating rotation 4/4:   5%|▌         | 3/60 [00:01<00:16,  3.55it/s]
+Evaluating rotation 4/4:   8%|▊         | 5/60 [00:01<00:18,  2.90it/s]
+Evaluating rotation 4/4:  12%|█▏        | 7/60 [00:02<00:13,  3.86it/s]
+Evaluating rotation 4/4:  15%|█▌        | 9/60 [00:02<00:16,  3.15it/s]
+Evaluating rotation 4/4:  18%|█▊        | 11/60 [00:03<00:13,  3.66it/s]
+Evaluating rotation 4/4:  22%|██▏       | 13/60 [00:04<00:14,  3.18it/s]
+Evaluating rotation 4/4:  25%|██▌       | 15/60 [00:04<00:12,  3.69it/s]
+Evaluating rotation 4/4:  28%|██▊       | 17/60 [00:05<00:12,  3.36it/s]
+Evaluating rotation 4/4:  32%|███▏      | 19/60 [00:05<00:10,  3.78it/s]
+Evaluating rotation 4/4:  35%|███▌      | 21/60 [00:06<00:10,  3.77it/s]
+Evaluating rotation 4/4:  37%|███▋      | 22/60 [00:06<00:11,  3.36it/s]
+Evaluating rotation 4/4:  40%|████      | 24/60 [00:06<00:07,  4.66it/s]
+Evaluating rotation 4/4:  42%|████▏     | 25/60 [00:07<00:08,  3.98it/s]
+Evaluating rotation 4/4:  43%|████▎     | 26/60 [00:07<00:11,  2.94it/s]
+Evaluating rotation 4/4:  48%|████▊     | 29/60 [00:08<00:07,  3.97it/s]
+Evaluating rotation 4/4:  50%|█████     | 30/60 [00:08<00:08,  3.40it/s]
+Evaluating rotation 4/4:  52%|█████▏    | 31/60 [00:08<00:08,  3.55it/s]
+Evaluating rotation 4/4:  55%|█████▌    | 33/60 [00:09<00:07,  3.74it/s]
+Evaluating rotation 4/4:  57%|█████▋    | 34/60 [00:09<00:06,  3.88it/s]
+Evaluating rotation 4/4:  58%|█████▊    | 35/60 [00:10<00:07,  3.16it/s]
+Evaluating rotation 4/4:  62%|██████▏   | 37/60 [00:10<00:06,  3.47it/s]
+Evaluating rotation 4/4:  65%|██████▌   | 39/60 [00:11<00:06,  3.21it/s]
+Evaluating rotation 4/4:  68%|██████▊   | 41/60 [00:11<00:04,  3.85it/s]
+Evaluating rotation 4/4:  72%|███████▏  | 43/60 [00:12<00:04,  3.45it/s]
+Evaluating rotation 4/4:  75%|███████▌  | 45/60 [00:12<00:03,  4.59it/s]
+Evaluating rotation 4/4:  77%|███████▋  | 46/60 [00:12<00:03,  4.27it/s]
+Evaluating rotation 4/4:  78%|███████▊  | 47/60 [00:13<00:03,  3.85it/s]
+Evaluating rotation 4/4:  82%|████████▏ | 49/60 [00:13<00:01,  5.50it/s]
+Evaluating rotation 4/4:  83%|████████▎ | 50/60 [00:13<00:02,  3.64it/s]
+Evaluating rotation 4/4:  88%|████████▊ | 53/60 [00:14<00:01,  5.98it/s]
+Evaluating rotation 4/4:  92%|█████████▏| 55/60 [00:14<00:01,  4.18it/s]
+Evaluating rotation 4/4:  97%|█████████▋| 58/60 [00:15<00:00,  4.26it/s]
+Evaluating rotation 4/4: 100%|██████████| 60/60 [00:15<00:00,  3.85it/s]
+2026-05-11 04:15:18,177 - kdeep.apps.deepsite.app - INFO - Writing results
+2026-05-11 04:15:18,508 - moleculekit.util - WARNING - writeVoxels is deprecated. Please use writeCube instead.
+2026-05-11 04:15:19,046 - moleculekit.molecule - INFO - Removed 13 atoms. 1612 atoms remaining in the molecule.
+Checking licence for DeepSite 1
+# Licence:
+#   Product: DeepSite 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is /tmp/tmptlvlyc2q.pdb)
+Checking licence for DeepSite 1
+# Licence:
+#   Product: DeepSite 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid
+Checking licence for DeepSite 1
+# Licence:
+#   Product: DeepSite 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid
+Checking licence for DeepSite 1
+# Licence:
+#   Product: DeepSite 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid
+Checking licence for DeepSite 1
+# Licence:
+#   Product: DeepSite 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /workspace/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid

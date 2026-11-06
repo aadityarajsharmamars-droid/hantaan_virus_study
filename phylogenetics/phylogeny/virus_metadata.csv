@@ -1,0 +1,49 @@
+Virus_name,Family,Order,Class,Phylum,NCBI_taxid,Protein_name,Accession_ID,Protein_length,Downloaded_from
+Andes virus,,,,,,L,pdb,537,NCBI
+Hantaan virus,,,,,,L,YBO61608.1,115,NCBI
+Seoul virus,,,,,,L,YBB96869.2,2127,NCBI
+Sin Nombre virus,,,,,,L,sp,428,NCBI
+Puumala virus,,,,,,L,sp,2156,NCBI
+Dobrava-Belgrade virus,,,,,,L,sp,2151,NCBI
+Tula virus,,,,,,L,sp,2153,NCBI
+Prospect Hill virus,,,,,,L,YP_009508266.1,2155,NCBI
+La Crosse virus,,,,,11577,L,pdb,184,NCBI
+California encephalitis virus,,,,,35305,L,YP_010084300.1,2263,NCBI
+Bunyamwera virus,,,,,35304,L,sp,2238,NCBI
+Oropouche virus,,,,,118655,L,YBP04090.1,2247,NCBI
+Schmallenberg virus,,,,,1133363,L,sp,2254,NCBI
+Akabane virus,,,,,70566,L,XMF84332.1,2251,NCBI
+Rift Valley fever virus,,,,,11588,L,YDE70449.1,2089,NCBI
+SFTS virus,,,,,1003835,L,YBO65109.1,2084,NCBI
+Heartland virus,,,,,1216928,L,sp,2084,NCBI
+Uukuniemi virus,,,,,11591,L,YDQ35587.1,156,NCBI
+Toscana virus,,,,,11590,L,sp,2095,NCBI
+Crimean-Congo hemorrhagic fever virus,,,,,,L,pdb,3945,NCBI
+Nairobi sheep disease virus,,,,,194540,L,YDQ27487.1,3853,NCBI
+Dugbe virus,,,,,,L,sp,4036,NCBI
+Hazara virus,,,,,11596,L,sp,485,NCBI
+Lassa virus,,,,,,L,pdb,175,NCBI
+LCMV,,,,,,L,WZD66253.1,2207,NCBI
+Junin virus,,,,,,L,sp,94,NCBI
+Machupo virus,,,,,,L,sp,94,NCBI
+Guanarito virus,,,,,,L,sp,560,NCBI
+Influenza A virus,,,,,11320,PA,YEO13392.1,716,NCBI
+Influenza A virus,,,,,11320,PB1,YEO13395.1,758,NCBI
+Influenza B virus,,,,,11520,PA,YEO08291.1,726,NCBI
+Influenza B virus,,,,,11520,PB1,YEN47311.1,752,NCBI
+Influenza C virus,,,,,11552,PA,sp,709,NCBI
+Influenza C virus,,,,,11552,PB1,YDU70748.1,486,NCBI
+Influenza D virus,,,,,1511084,PA,YDE35785.1,705,NCBI
+Influenza D virus,,,,,1511084,PB1,YDE35812.1,318,NCBI
+Thogoto virus,,,,,,PA,sp,622,NCBI
+Thogoto virus,,,,,,PB1,pdb,710,NCBI
+Dhori virus,,,,,,PA,sp,716,NCBI
+Dhori virus,,,,,,PB1,YBG73221.1,721,NCBI
+Quaranfil virus,,,,,,PA,sp,777,NCBI
+Quaranfil virus,,,,,,PB1,sp,777,NCBI
+Infectious salmon anemia virus,,,,,2907958,PA,AAL67960.1,578,NCBI
+Infectious salmon anemia virus,,,,,2907958,PB1,AAL67962.1,708,NCBI
+Vesicular stomatitis virus,,,,,11276,L,pdb,2109,NCBI
+Rabies virus,,,,,,L,XUX57401.1,2127,NCBI
+Measles virus,,,,,11234,L,YEL90739.1,2183,NCBI
+Ebola virus,,,,,1570291,L,sp,288,NCBI

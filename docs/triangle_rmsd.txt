@@ -1,0 +1,1 @@
+Local triangle alignment (2 ACC + 1 HPH) RMSD: 1.849 Å

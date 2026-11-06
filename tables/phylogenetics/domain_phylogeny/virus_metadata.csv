@@ -1,0 +1,47 @@
+Virus_name,Family,Order,Class,Phylum,NCBI_taxid,Protein_name,Accession_ID,Protein_length,Downloaded_from
+Andes virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,1980456,L,Q9E005.4,2153,NCBI Protein
+Hantaan virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052480,L,P23456.3,2151,NCBI Protein
+Seoul virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052498,L,YBB96869.2,2127,NCBI Protein
+Sin Nombre virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052499,L,Q89709.1,2153,NCBI Protein
+Puumala virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052493,L,P0C760.1,2156,NCBI Protein
+Dobrava-Belgrade virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052477,L,Q806Y6.1,2151,NCBI Protein
+Tula virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052503,L,Q9YQR5.1,2153,NCBI Protein
+Prospect Hill virus,Hantaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,3052492,L,YP_009508266.1,2155,NCBI Protein
+La Crosse virus,Peribunyaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,11577,L,A5HC98.1,2263,NCBI Protein
+California encephalitis virus,Peribunyaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,35305,L,YP_010084300.1,2263,NCBI Protein
+Bunyamwera virus,Peribunyaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,35304,L,P20470.1,2238,NCBI Protein
+Oropouche virus,Peribunyaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,118655,L,YBP04090.1,2247,NCBI Protein
+Schmallenberg virus,Peribunyaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,1133363,L,H2AM11.1,2254,NCBI Protein
+Akabane virus,Peribunyaviridae,Elliovirales,Bunyaviricetes,Negarnaviricota,70566,L,XMF84332.1,2251,NCBI Protein
+Rift Valley fever virus,Phenuiviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,11588,L,YDE70449.1,2089,NCBI Protein
+SFTS virus,Phenuiviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,1003835,L,YBO65109.1,2084,NCBI Protein
+Heartland virus,Phenuiviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,1216928,L,J3TRD1.1,2084,NCBI Protein
+Uukuniemi virus,Phenuiviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,11591,L,XDF39827.1,2103,NCBI Protein
+Toscana virus,Phenuiviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,11590,L,P37800.1,2095,NCBI Protein
+Crimean-Congo hemorrhagic fever virus,Nairoviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,3052518,L,9XEC,3945,NCBI Protein
+Nairobi sheep disease virus,Nairoviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,194540,L,YDQ27487.1,3853,NCBI Protein
+Dugbe virus,Nairoviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,3052514,L,Q66431.1,4036,NCBI Protein
+Lassa virus,Arenaviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,3052310,L,YBP49477.1,2131,NCBI Protein
+LCMV,Arenaviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,3052303,L,YDM80305.1,2209,NCBI Protein
+Junin virus,Arenaviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,2169991,L,Q6XQI4.2,2210,NCBI Protein
+Machupo virus,Arenaviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,3052317,L,Q6IUF8.1,2209,NCBI Protein
+Guanarito virus,Arenaviridae,Hareavirales,Bunyaviricetes,Negarnaviricota,3052307,L,Q6UY70.1,2198,NCBI Protein
+Influenza A virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11320,PA,YEO13392.1,716,NCBI Protein
+Influenza A virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11320,PB1,YEO13395.1,758,NCBI Protein
+Influenza B virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11520,PA,YEO08291.1,726,NCBI Protein
+Influenza B virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11520,PB1,YEO08292.1,770,NCBI Protein
+Influenza C virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11552,PA,P13878.1,709,NCBI Protein
+Influenza C virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11552,PB1,YDU70747.1,774,NCBI Protein
+Influenza D virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,1511084,PB1,YDE35785.1,705,NCBI Protein
+Thogoto virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11569,PA,8Z9Q,622,NCBI Protein
+Thogoto virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11569,PB1,P27194.2,622,NCBI Protein
+Dhori virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11318,PA,QOQ34681.1,637,NCBI Protein
+Dhori virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,11318,PB1,YBG73221.1,721,NCBI Protein
+Quaranfil virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,688436,PA,D0UFC8.1,688,NCBI Protein
+Quaranfil virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,688436,PB1,D0QX26.1,777,NCBI Protein
+Infectious salmon anemia virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,2907958,PA,XBC29803.1,575,NCBI Protein
+Infectious salmon anemia virus,Orthomyxoviridae,Articulavirales,Insthoviricetes,Negarnaviricota,2907958,PB1,AAL67962.1,708,NCBI Protein
+Vesicular stomatitis virus,Rhabdoviridae,Mononegavirales,Monjiviricetes,Negarnaviricota,11276,L,5A22,2109,NCBI Protein
+Rabies virus,Rhabdoviridae,Mononegavirales,Monjiviricetes,Negarnaviricota,11292,L,XUX57401.1,2127,NCBI Protein
+Measles virus,Paramyxoviridae,Mononegavirales,Monjiviricetes,Negarnaviricota,11234,L,YEL90739.1,2183,NCBI Protein
+Ebola virus,Filoviridae,Mononegavirales,Monjiviricetes,Negarnaviricota,1570291,L,Q6V1Q2.1,2212,NCBI Protein

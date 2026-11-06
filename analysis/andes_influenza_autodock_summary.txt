@@ -1,0 +1,44 @@
+Comparison of AutoDock scores between Andes and Influenza
+======================================================================
+
+Inputs:
+  Influenza: user-uploads/Influenza ligands results.csv
+  Andes (AutoDock): analysis/acedock_autodock_join.csv [column: score_autodock]
+
+Matched ligands (N): 246
+
+Descriptive statistics:
+  andes_autodock: n=246, mean=-6.536, sd=0.849, median=-6.494, min=-8.260, max=-3.927, skew=0.376, kurtosis=0.064, Shapiro-W=0.984, p=8.07e-03
+  influenza_autodock: n=246, mean=-5.594, sd=0.738, median=-5.624, min=-7.599, max=-3.561, skew=-0.067, kurtosis=-0.061, Shapiro-W=0.996, p=8.48e-01
+
+Linear regression (Influenza ~ Andes):
+  y = intercept + slope * x
+  intercept = -1.7461
+  slope     = 0.5887
+  R^2       = 0.4593
+  Pearson r = 0.6777 (p=1.99e-34)
+  Spearman  = 0.6826 (p=4.28e-35)
+  n         = 246
+
+Top 15 outliers by absolute residual (Influenza - Predicted):
+       CHEMBL  andes_autodock  influenza_autodock  pred_influenza_from_andes  residual  abs_residual
+CHEMBL4435640          -5.665              -7.246                  -5.081132 -2.164868      2.164868
+CHEMBL4542541          -5.675              -7.127                  -5.087019 -2.039981      2.039981
+CHEMBL4435642          -6.022              -7.302                  -5.291303 -2.010697      2.010697
+CHEMBL4468812          -5.457              -6.765                  -4.958679 -1.806321      1.806321
+  CHEMBL16377          -7.125              -7.567                  -5.940655 -1.626345      1.626345
+CHEMBL4475606          -5.300              -6.367                  -4.866251 -1.500749      1.500749
+CHEMBL5612919          -6.673              -7.027                  -5.674556 -1.352444      1.352444
+ CHEMBL280446          -7.872              -7.599                  -6.380425 -1.218575      1.218575
+ CHEMBL278443          -6.299              -6.646                  -5.454377 -1.191623      1.191623
+ CHEMBL280445          -6.830              -6.953                  -5.766984 -1.186016      1.186016
+CHEMBL4469214          -5.692              -6.213                  -5.097027 -1.115973      1.115973
+CHEMBL2040564          -6.412              -4.515                  -5.520902  1.005902      1.005902
+CHEMBL2040642          -5.249              -3.833                  -4.836226  1.003226      1.003226
+CHEMBL2040639          -7.283              -6.983                  -6.033672 -0.949328      0.949328
+  CHEMBL16579          -7.375              -7.028                  -6.087834 -0.940166      0.940166
+
+Figures saved to plots/:
+  - plots/andes_vs_influenza_autodock_scatter.png
+  - andes_autodock_score_distribution.png
+  - influenza_autodock_score_distribution.png

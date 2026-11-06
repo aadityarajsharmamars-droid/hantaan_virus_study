@@ -1,0 +1,1 @@
+{"systems": [{"name": "output.pdb", "files": ["output.pdb"]}], "tables": [{"path": "details.csv"}], "plots": {"files": ["pka_plot.png"]}}

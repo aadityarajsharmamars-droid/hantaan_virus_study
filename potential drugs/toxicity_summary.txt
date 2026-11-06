@@ -1,0 +1,14 @@
+active: N=13
+  herg_risk: 1 (7.7%)
+  azole_cyp_risk: 0 (0.0%)
+  electrophile_risk: 0 (0.0%)
+  redox_tox_risk: 0 (0.0%)
+  mutagenicity_risk: 0 (0.0%)
+  toxicity_flag: 1 (7.7%)
+modified: N=155
+  herg_risk: 15 (9.7%)
+  azole_cyp_risk: 0 (0.0%)
+  electrophile_risk: 0 (0.0%)
+  redox_tox_risk: 0 (0.0%)
+  mutagenicity_risk: 0 (0.0%)
+  toxicity_flag: 15 (9.7%)

@@ -1,0 +1,5 @@
+{
+    "output.pdb": "The protonated PDB file",
+    "details.csv": "A report of all modified residue protonation states",
+    "pka_plot.png": "A plot showing the pKa values of each residue"
+}

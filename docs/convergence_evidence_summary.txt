@@ -1,0 +1,43 @@
+Convergent pharmacophore and pocket comparison: Influenza PA endonuclease (6FS6) vs Andes virus L endonuclease NTD (6Q99)
+
+Pocket pharmacophore statistics
+- Type-overlap score (multiplicity-aware Jaccard): 0.30
+  File: pharmacophore_compare/summary.txt
+- Local kernel alignment (2x ACC + 1x HPH) RMSD: 1.849 Å
+  File: pharmacophore_compare/triangle_rmsd.txt
+
+Docking cross-target comparison (AceDock; 248 ligands)
+- N common: 248
+- Median score PA (6FS6): -28.77
+- Median score ANDV (6Q99): -21.89
+- Median delta (ANDV - PA): +6.84 (more negative is better)
+- Wilcoxon signed-rank p-value: 5.71e-41
+  Files: analysis/summary.csv, analysis/merged_scores.csv, analysis/dual_top_quartile.csv
+
+Active-site chemistry
+- 6FS6 metal coordination: Mn detected with coordinating residues within 2.0–2.5 Å (GLU80, ASP108, GLU119; backbone O of ILE120), multiple symmetry-related chains.
+  File: analysis/active_site/fs6_metal_coordination.csv
+- 6Q99: no metal contacts within 2.6 Å detected in prepared structure.
+  File: analysis/active_site/q99_metal_coordination.csv
+
+Pocket residues (within 10 Å of pocket centers)
+- 6FS6: analysis/active_site/fs6_pocket_residues.csv
+- 6Q99: analysis/active_site/q99_pocket_residues.csv
+
+Local backbone comparison around Andes pocket center (10 Å radius)
+- Result: insufficient matched CA atoms with current simple selection for RMSD. (The two constructs differ in local coverage.)
+  File: analysis/active_site/pocket_backbone_rmsd.txt
+
+Structural classification
+- 6FS6 CATH mapping via PDBe: 3.40.91.90 (Alpha-Beta; 3-Layer(aba) Sandwich; Topology: Restriction Endonuclease; Homology: Influenza RNA-dependent RNA polymerase subunit PA, endonuclease domain)
+- 6Q99: no CATH mapping found via PDBe endpoint at time of query.
+
+Sequence relatedness (coarse PDB-derived global alignment)
+- Aligned length ≈ 191 aa; percent identity ≈ 33.5%
+  (Profile–profile HMM with HHsearch is recommended to robustly exclude homology.)
+
+Prepared for HHsearch
+- FASTA files:
+  - analysis/sequences/6FS6_chainE.fasta
+  - analysis/sequences/6Q99_chainA.fasta
+- Recommended: build HMMs with HHblits (Uniclust/UniRef), then HHsearch chainE vs chainA, and each vs PDB70/UniProt reference. Report HHsearch probability and E-value.

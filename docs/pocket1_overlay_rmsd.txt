@@ -1,0 +1,9 @@
+Pocket overlay RMSD (local 6A heavy-atom ICP to ANDV L endonuclease Pocket 1)
+Reference: 6Q99, center=(171.08,155.54,97.44), radius=6.0 A
+Candidates:
+ - 2ZNL (Influenza A PA-PB1 complex): RMSD ~ 2.84 A (orange)
+ - 4IUJ (Influenza A PA): RMSD ~ 2.85 A (purple)
+ - 8P1N (Hantaan virus L polymerase): RMSD ~ 2.40 A (blue)
+Method: ICP alignment on local heavy-atom clouds within 6A of each pocket center; pocket center chosen by metal/ligand centroid when present, else acidic/histidine cluster centroid near N-terminus.
+Note: This is a local pocket alignment, not sequence-registered residue alignment; values reflect geometric similarity of the local environment only.
+Screenshot: screenshots/pocket1_overlay_6Q99_vs_2ZNL_4IUJ_8P1N.png

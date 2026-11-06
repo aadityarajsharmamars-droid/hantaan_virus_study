@@ -1,0 +1,51 @@
+ADMET report for dataset: analysis/final_training_dataset.csv
+
+Records total: 248 | with ADMET fields: 74 (29.8%)
+
+Classification criteria for Safe: Ro5_OK == True; Veber_OK == True; Egan_OK == True; Structural alerts == 0; PAINS == 0; Brenk alerts == 0; NIH alerts == 0; ZINC reactive alerts == 0
+
+Safe: 26 (35.1%) | Unsafe: 48 (64.9%)
+
+Continuous ADMET descriptors (overall):
+  admet_MW: N=74 | mean=380.28 | median=367.36 | p10=289.91 | p90=475.54
+  admet_cLogP: N=74 | mean=2.95 | median=3.24 | p10=0.95 | p90=4.53
+  admet_TPSA: N=74 | mean=108.43 | median=112.00 | p10=74.60 | p90=140.89
+  admet_HBD: N=74 | mean=3.08 | median=3.00 | p10=1.30 | p90=4.00
+  admet_HBA: N=74 | mean=5.30 | median=5.00 | p10=4.00 | p90=7.00
+  admet_RotB: N=74 | mean=4.15 | median=4.00 | p10=3.00 | p90=5.00
+  admet_QED: N=74 | mean=0.50 | median=0.52 | p10=0.23 | p90=0.74
+  admet_ESOL_logS: N=74 | mean=-3.33 | median=-3.50 | p10=-4.70 | p90=-1.75
+
+By ADMET_Class:
+  Safe: N=26
+    admet_MW: mean=332.31 | median=327.80 | p10=289.29 | p90=364.38
+    admet_cLogP: mean=2.09 | median=1.68 | p10=0.87 | p90=3.61
+    admet_TPSA: mean=101.97 | median=110.40 | p10=68.61 | p90=120.86
+    admet_HBD: mean=2.54 | median=3.00 | p10=1.00 | p90=3.00
+    admet_HBA: mean=5.12 | median=6.00 | p10=3.00 | p90=6.00
+    admet_RotB: mean=3.81 | median=4.00 | p10=3.00 | p90=5.00
+    admet_QED: mean=0.71 | median=0.68 | p10=0.64 | p90=0.80
+    admet_ESOL_logS: mean=-2.47 | median=-2.35 | p10=-3.52 | p90=-1.65
+    ESOL_Class counts: soluble:15, very soluble:9, moderately soluble:2
+    admet_Ro5_Violations: mean=0.00 | median=0.00
+    admet_Alerts_Count: mean=0.00 | median=0.00
+    admet_PAINS_Count: mean=0.00 | median=0.00
+    admet_Brenk_Count: mean=0.00 | median=0.00
+    admet_NIH_Count: mean=0.00 | median=0.00
+    admet_ZINCreact_Count: mean=0.00 | median=0.00
+  Unsafe: N=48
+    admet_MW: mean=406.27 | median=393.33 | p10=321.00 | p90=497.72
+    admet_cLogP: mean=3.41 | median=3.57 | p10=1.52 | p90=4.67
+    admet_TPSA: mean=111.93 | median=112.00 | p10=74.60 | p90=141.73
+    admet_HBD: mean=3.38 | median=3.00 | p10=2.00 | p90=5.00
+    admet_HBA: mean=5.40 | median=5.00 | p10=4.00 | p90=7.00
+    admet_RotB: mean=4.33 | median=4.00 | p10=3.00 | p90=5.60
+    admet_QED: mean=0.40 | median=0.37 | p10=0.21 | p90=0.56
+    admet_ESOL_logS: mean=-3.79 | median=-4.04 | p10=-4.91 | p90=-2.17
+    ESOL_Class counts: moderately soluble:23, soluble:19, very soluble:5, poorly soluble:1
+    admet_Ro5_Violations: mean=0.23 | median=0.00
+    admet_Alerts_Count: mean=1.75 | median=1.00
+    admet_PAINS_Count: mean=0.00 | median=0.00
+    admet_Brenk_Count: mean=0.00 | median=0.00
+    admet_NIH_Count: mean=0.00 | median=0.00
+    admet_ZINCreact_Count: mean=0.00 | median=0.00

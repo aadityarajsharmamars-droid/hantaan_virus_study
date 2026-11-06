@@ -1,0 +1,18 @@
+{
+    "function": "proteinprepare.apps.proteinprepare.app.main",
+    "slpm_path": "proteinprepare.v1.proteinprepare",
+    "arguments": {
+        "pdbfile": null,
+        "pdbid": "6FS6",
+        "pH": 7.2,
+        "chain": null,
+        "mutations": null,
+        "reprotonate": null,
+        "remove_water": false,
+        "remove_heteroatoms": false,
+        "residue_smiles": null,
+        "ignore_ns": false,
+        "outdir": ".",
+        "scratchdir": "./scratch"
+    }
+}

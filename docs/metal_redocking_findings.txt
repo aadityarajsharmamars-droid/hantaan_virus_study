@@ -1,0 +1,64 @@
+Metal-aware redocking findings (ANDV L endonuclease, 6Q99 with aligned metal)
+Date: 2026-05-12
+
+What was done
+1) Metal placement
+- A divalent metal ion from the influenza PA pocket (6FS6) was aligned into the ANDV pocket (6Q99) via local CA-based Kabsch alignment around the pocket centers (10 Å spheres).
+- Output receptor: receptors/6Q99/output_metal.pdb.
+
+2) Ligand sets prepared
+- Parents (safe): potential drugs/active_subset_safe.sdf (13 entries from active_subset_safe.csv).
+- Modified analogues (safe): potential drugs/active_subset_modified_safe.sdf (155 entries, derived via F_scan/Me_scan/N_walk, then filtered for alerts/developability/toxicity heuristics).
+
+3) Docking protocol
+- App: playmolecule.apps.acedock (free mode), radius 8 Å around pocket1 template, 10 poses per ligand, pharmacophore rescoring disabled, using the metal-augmented receptor.
+- Jobs:
+  • docking/ANDV_6Q99_pocket1_metal_active (parents) – COMPLETED.
+  • docking/ANDV_6Q99_pocket1_metal_modified (modified analogues) – COMPLETED.
+
+Key results
+A) Parents (metal-aware vs. no-metal) — potential drugs/redock_metal_active_scores.csv
+- N compared: 13 (matches active_subset_safe.csv)
+- Median scores: no-metal −27.196; metal −25.436; median Δ = +2.717 (more negative is better), i.e., overall slight worsening without explicit restraints.
+- Per-ligand examples (Δ = metal − no-metal):
+  • CHEMBL4460007: −30.244 (from −27.235), Δ −3.009 (improved)
+  • CHEMBL4469214: −27.995 (from −26.579), Δ −1.416 (improved)
+  • CHEMBL2040580: −27.840 (from −28.864), Δ +1.024 (worsened)
+  • CHEMBL4438546: −26.555 (from −29.920), Δ +3.365 (worsened)
+  • CHEMBL5612919: −24.080 (from −31.700), Δ +7.620 (worsened)
+- Overall counts: improved 3, worsened 10, unchanged 0. This pattern is consistent with adding a metal without enforcing correct coordination: ligands incompatible with the metal geometry are penalized, while compatible/metal-engaging scaffolds improve.
+
+B) Modified analogues (grouped by parent|modification) — potential drugs/redock_metal_modified_scores.csv
+- Groups (best per parent|mod): 27
+- Best scores (top 10):
+  • CHEMBL4564718 | N_walk: −33.395
+  • CHEMBL4438546 | N_walk: −31.004
+  • CHEMBL5612919 | N_walk: −30.879
+  • CHEMBL4460007 | Me_scan: −30.165
+  • CHEMBL2040580 | Me_scan: −29.838
+  • CHEMBL2040580 | F_scan: −29.451
+  • CHEMBL4438546 | F_scan: −29.433
+  • CHEMBL4438546 | Me_scan: −29.215
+  • CHEMBL2040581 | Me_scan: −29.188
+  • CHEMBL2040581 | F_scan: −28.774
+- Distribution summary: min = −33.395; median = −28.406; entries ≤ −30.0: 4.
+- Notably, several N_walk variants rank best, suggesting that heteroaromatic substitution can better complement the metal-augmented pocket and local HBA/HPH kernel.
+
+Interpretation
+- The ANDV pocket supports cross-targetability for certain chemotypes, but metal introduction without explicit coordination restraints causes a mixed outcome across the parent set.
+- Modified analogues (especially N_walk and selected Me/F scans) show strong metal-aware docking scores, consistent with improved engagement near the catalytic site and with the shared 2×ACC + 1×HPH kernel observed in pharmacophore comparisons.
+
+Safety context
+- All docked ligands here were pre-filtered by structural alerts (PAINS/Brenk/NIH), property window (MW/cLogP/TPSA/etc.), and basic toxicity heuristics (hERG/electrophile/redox/mutagenicity proxies). See files in the 'potential drugs' folder, including toxicity_summary.txt.
+
+Recommendations
+1) Metal-coordination restraints docking: Re-run top candidates in acedock 'restraints' mode with distance restraints that enforce plausible metal–chelator geometry (e.g., 2.0–2.4 Å for O−Mn contacts; coordination numbers consistent with the scaffold). This should reduce artifacts and favor realistic poses for chelating series.
+2) Pose inspection: Visualize the top 10 modified hits and the improved parents (e.g., CHEMBL4460007, CHEMBL4469214) in the 3D viewer to confirm sensible metal contacts and lack of steric/electrostatic clashes.
+3) Physics refinement: Perform short MD relaxation of receptor + best docked ligands with explicit metal/waters, followed by MM-GBSA or more rigorous FEP for a small finalist set.
+4) Safety follow-up: Apply QSAR models (hERG/CYP/Ames) to the short list; deprioritize any with elevated risk and iterate chemotype tuning (reduce cationic amphiphile character, modulate pKa/logP, limit polyaromatic rings).
+5) Experimental plan: Progress 5–10 top-ranked, toxicity-clean modified analogues to biochemical endonuclease assays; include a few improved parents as references for SAR linkage.
+
+Deliverables (this stage)
+- Parents, metal-aware comparisons: potential drugs/redock_metal_active_scores.csv
+- Modified analogues, metal-aware scores: potential drugs/redock_metal_modified_scores.csv and ..._detailed.csv
+- Upstream safety and selection files: see the 'potential drugs' folder inventory.

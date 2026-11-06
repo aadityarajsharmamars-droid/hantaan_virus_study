@@ -1,0 +1,27 @@
+Closest taxonomic common ancestor: Negarnaviricota
+
+Summary
+- We compiled 40 target viruses and retrieved conserved polymerase proteins from NCBI/UniProt into proteins_raw/ according to the scheme:
+  * Orthomyxoviruses (Influenza/Thogoto/Dhori/Quaranfil/Isavirus): PA and PB1
+  * Others (Bunyaviruses/Hantaviruses/Arenaviruses/Rhabdo/Paramyxo/Filoviruses): L
+- We built a metadata table with NCBI taxonomy ranks, accessions, sequence lengths: virus_metadata.csv
+- Endonuclease-domain phylogeny (endonuclease_domains.*) was constructed from the N-terminal cap-snatching endonuclease regions (heuristically 1–240 aa with H–PD–D/E–K motif) from Orthomyxoviridae, Bunyavirales, and Arenaviridae representatives.
+- Polymerase palm-domain phylogeny (polymerase_palm_domains.*) was constructed by extracting windows around the GDD catalytic motif from L/PB1.
+- Multiple sequence alignment: MAFFT
+- Trimming: gap-fraction filter (<=50% gaps per column)
+- Tree inference: Neighbor-Joining (BLOSUM62) via Biopython (IQ-TREE not available server-side).
+
+Key findings
+- NCBI Taxonomy places Andes orthohantavirus (Bunyavirales: Hantaviridae) and Influenza A virus (Articulavirales: Orthomyxoviridae) under the same phylum Negarnaviricota but different classes (Bunyaviricetes vs Insthoviricetes).
+- Endonuclease-domain tree shows Orthomyxovirus PA endonucleases grouping apart from Bunyavirales/Arenaviridae L endonucleases, joining at a deep node—consistent with an ancient common ancestor of segmented negative-sense RNA viruses (Polyploviricotina) with cap-snatching machinery.
+- Polymerase palm-domain tree (limited taxon recovery around GDD motif) also separates non-segmented Mononegavirales from segmented groups.
+
+Conclusion
+- Closest taxonomic common ancestor: Negarnaviricota.
+- Closest functional/domain ancestor: an ancestral segmented negative-sense RNA virus bearing cap-snatching endonuclease and RdRp palm catalytic machinery, preceding the divergence of Orthomyxoviridae and Bunyavirales.
+
+Files of interest
+- proteins_raw/*.fasta (all downloaded polymerase proteins)
+- virus_metadata.csv (taxonomy + accession tracking)
+- domains/endonuclease_domains.fasta, domains/polymerase_palm_domains.fasta
+- trees/endonuclease_domains.nwk/.png, trees/polymerase_palm_domains.nwk/.png

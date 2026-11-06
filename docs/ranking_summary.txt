@@ -1,0 +1,55 @@
+Andes orthohantavirus protein conservation ranking (ΔH, bits)
+
+Overall protein ranking by mean ΔH (higher = more conserved)
+1) Gc: mean 4.276, median 4.322, min 2.898, n=487
+2) N: mean 4.239, median 4.322, min 2.401, n=428
+3) Gn: mean 4.230, median 4.322, min 2.893, n=633
+4) L: mean 4.204, median 4.322, min 2.070, n=2153
+
+Top 10 most conserved annotated features (by median ΔH)
+- N | Region | Interaction with host RPS19 | 150-175 | ΔHmed=4.322
+- N | Region | Interaction with host UBE2I/UBC9 | 188-191 | ΔHmed=4.322
+- N | Site | Important for the endonuclease activity | 88-88 | ΔHmed=4.322
+- N | Site | Important for the endonuclease activity | 103-103 | ΔHmed=4.322
+- N | Site | Involved in the inhibition of IFN induction | 386-386 | ΔHmed=4.322
+- GPC | Motif | YxxL | 618-621 | ΔHmed=4.322
+- GPC | Site | Cleavage; by host signal peptidase | 651-652 | ΔHmed=4.322
+- L | Active site | For endonuclease activity | 124-124 | ΔHmed=4.322
+- L | Binding site |  | 36-36 | ΔHmed=4.322
+- L | Binding site |  | 54-54 | ΔHmed=4.322
+
+Top 10 most variable annotated features (lowest median ΔH)
+- N | Motif | YxxL | 178-181 | ΔHmed=4.208
+- N | Region | Involved in the inhibition of IFN induction | 252-296 | ΔHmed=4.322
+- GPC | Transmembrane | Helical | 631-651 | ΔHmed=4.322
+- GPC | Transmembrane | Helical | 1108-1128 | ΔHmed=4.322
+- GPC | Signal |  | 1-18 | ΔHmed=4.322
+- GPC | Transmembrane | Helical | 488-508 | ΔHmed=4.322
+- GPC | Region | Binding to the ribonucleoprotein | 1124-1138 | ΔHmed=4.322
+- N | Region | RdRP binding | 1-50 | ΔHmed=4.322
+- L | Domain | RdRp catalytic | 957-1143 | ΔHmed=4.322
+- N | Region | Homomultimerization | 1-79 | ΔHmed=4.322
+
+Most variable 20-residue windows per protein (lowest mean ΔH)
+- N:
+    234-253 | mean ΔH=3.99
+    270-289 | mean ΔH=4.00
+    237-256 | mean ΔH=4.00
+- Gn:
+    481-500 | mean ΔH=4.01
+    478-497 | mean ΔH=4.01
+    479-498 | mean ΔH=4.01
+- Gc:
+    459-478 | mean ΔH=4.12
+    460-479 | mean ΔH=4.12
+    461-480 | mean ΔH=4.12
+- L:
+    262-281 | mean ΔH=3.65
+    263-282 | mean ΔH=3.65
+    264-283 | mean ΔH=3.67
+
+Target selection (small-molecule)
+1) L endonuclease (N-terminus of L): essential, highly conserved catalytic site, druggable metal pocket (6Q99).
+2) L RdRp catalytic motifs: conserved but larger/dynamic site; nucleoside/non-nucleoside strategies.
+3) Nucleoprotein: conserved but surfaces often shallow/PPIs; possible oligomerization/RNA-binding disruptors.
+4) Gn/Gc: better for biologics/entry blockers; small-molecule pockets less established.

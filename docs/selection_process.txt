@@ -1,0 +1,129 @@
+Andes orthohantavirus drug-target selection: complete mapping of the process
+
+Scope
+- Build sequence collections for all proteins across strains/isolates
+- Multiple sequence alignments (MSAs)
+- Per-residue conservation scores (ΔH = log2(20) − Shannon entropy)
+- Map conservation onto 3D structures (blue conserved, red variable)
+- Rank drug targetability and report most/least conserved functionally annotated regions
+
+Data sources
+- UniProtKB (REST): all ANDV proteins, reviewed + unreviewed
+  Query: (organism_name:"Andes orthohantavirus") OR (organism_name:"Andes virus")
+  Files:
+  - data/uniprot/andes_orthohantavirus_uniprot.fasta
+  - data/uniprot/andes_orthohantavirus_uniprot_metadata.csv (fields include PDB Xrefs)
+- NCBI Protein/GenPept (E-utilities via Bio.Entrez): all isolates by organism name
+  Fallback used because taxonomy search returned no TaxIDs
+  Files:
+  - data/ncbi/andes_orthohantavirus_ncbi.fasta
+  - data/ncbi/andes_orthohantavirus_ncbi_metadata.csv (accession/product/gene/strain/host/etc.)
+- RCSB PDB: experimental structures
+  Pulled via UniProt Xrefs and direct downloads
+  Files:
+  - data/pdb/* (original PDB/mmCIF)
+  - data/pdb_colored/*_var.pdb (B-factor annotated with variability for visualization)
+
+Reproducible scripts (scripts/)
+1) retrieve_andes_orthohantavirus_proteins.py
+   - Downloads UniProt and NCBI datasets and PDB entries
+   - Normalizes PDB cross-refs and writes manifest: data/manifest_andes_orthohantavirus.json
+2) make_andv_proteins_function_table.py
+   - Produces data/summary/andv_proteins_function_positions.csv with
+     protein, segment (S/M/L), UniProt accession, positions, length, function
+3) compute_andv_conservation.py
+   - Classifies NCBI proteins into N, GPC (precursor), L using metadata keywords
+   - Filters by length (N: 350–500 aa, L: 1700–2500 aa, GPC: 900–1400 aa)
+   - Builds MSAs with MAFFT (--auto --anysymbol) per category, including the UniProt reviewed reference first
+   - Computes per-column Shannon entropy H, then ΔH = log2(20) − H (bits)
+   - Outputs per-residue ΔH tables:
+     * data/conservation/N_deltaH.csv (pos,residue,H,ΔH)
+     * data/conservation/GPC_deltaH.csv
+     * data/conservation/Gn_deltaH.csv (GPC 19–651 remapped to 1–633)
+     * data/conservation/Gc_deltaH.csv (GPC 652–1138 remapped to 1–487)
+     * data/conservation/L_deltaH.csv
+   - Manifest: data/conservation/manifest.json
+4) map_deltaH_to_pdb.py
+   - Extracts reference sequences from UniProt FASTA (O36307 N, Q9E006 GPC, Q9E005 L)
+   - For each structure, extracts chain sequence and aligns globally (pairwise) to the reference
+   - Maps reference positions → ΔH and converts to variability = 1 − (ΔH/log2(20))
+   - Writes variability into PDB B-factors for all atoms; saves to data/pdb_colored/*_var.pdb
+   - Note: two structures (6Y6Q, 6YRB) were loaded as mmCIF directly; B-factor mapping used PDBs for others
+5) plot_deltaH.py
+   - Plots ΔH vs position for N, Gn, Gc, L and an overlay for GPC
+   - Files: data/conservation/plots/*.png
+6) rank_conserved_regions.py
+   - Fetches UniProt JSON for O36307, Q9E006, Q9E005
+   - For functional features (Domain/Region/Motif/Zinc finger/Transmembrane/Signal/Site/Active site/Metal binding/Binding site/Coiled coil/Topological domain):
+     * Computes per-feature ΔH summary (median, mean, min, max)
+     * Ranks most conserved by ΔHmedian (desc) and most variable by ΔHmedian (asc)
+   - Files:
+     * data/conservation/rankings/conserved_regions_ranked.csv
+     * data/conservation/rankings/variable_regions_ranked.csv
+
+MSA and scoring details
+- MSA tool: MAFFT v7.505, options: --auto --anysymbol
+- Per-site entropy H computed over 20 canonical amino acids, ignoring gaps
+- ΔH = log2(20) − H. Range: 0 (highly variable) to 4.3219 (invariant among sequences)
+- For mapping to structures, variability = 1 − (ΔH / 4.3219) written into PDB B-factors
+
+Viewer/visualization mapping
+- Structures loaded to viewer from data/pdb_colored/*_var.pdb where possible
+- Coloring:
+  * Blue (conserved): low variability (beta below ~0.02; adjusted automatically to ensure contrast)
+  * Red (variable): higher variability (beta ≥ threshold)
+- Snapshots saved to:
+  * screenshots/N_conservation_snapshot.png
+  * screenshots/GPC_conservation_snapshot.png
+  * screenshots/L_conservation_snapshot.png
+
+Key results (high level)
+- Overall conservation (mean ΔH): Gc > N ≈ Gn > L
+- Highly conserved functional elements include:
+  * L endonuclease active site (ΔHmed = 4.322)
+  * N functional/host-interaction sites (ΔHmed = 4.322)
+  * GPC YxxL motif (618–621), signal peptidase site (651–652), transmembranes, Zn-fingers (ΔHmed = 4.322)
+- Sliding-window low-ΔH (more variable) segments highlight surface loops in N/Gn and regions in L around 262–283 (mean ΔH ≈ 3.65)
+
+Target selection logic
+- Primary drug target: L endonuclease (N-terminus of L)
+  Rationale: essential enzyme; highly conserved catalytic residues; tractable metal-dependent pocket; strong precedent (influenza PA endonuclease inhibitors). Structure reference: 6Q99.
+- Secondary: L RdRp catalytic motifs (conserved but larger, dynamic site)
+- Tertiary: N protein (PPI/RNA-binding surfaces; harder for classic small molecules)
+- Gn/Gc: better suited to biologics/entry blockers; small-molecule opportunities exist but with higher risk due to glycosylation/dynamics
+
+How to rerun end-to-end
+1) Retrieve datasets and PDBs
+   python scripts/retrieve_andes_orthohantavirus_proteins.py
+2) Summarize proteins and positions
+   python scripts/make_andv_proteins_function_table.py
+3) Compute MSAs and ΔH
+   python scripts/compute_andv_conservation.py
+4) Map ΔH to PDB B-factors
+   python scripts/map_deltaH_to_pdb.py
+5) Plot ΔH
+   python scripts/plot_deltaH.py
+6) Rank conserved/variable functional regions
+   python scripts/rank_conserved_regions.py
+
+Reproducibility notes
+- MAFFT version checked at runtime and recorded (v7.505)
+- BioPython used for parsing; pairwise alignment via Bio.pairwise2 (globalms)
+- NCBI access polite delays (~0.34 s/batch); may set NCBI_API_KEY and NCBI_EMAIL for higher rate
+- UniProt/PDB REST endpoints used with explicit User-Agent
+
+Known caveats / handling
+- NCBI taxonomy query didn’t return TaxIDs for Andes orthohantavirus; organism-name search used as fallback
+- Two PDB assemblies (6Y6Q, 6YRB) were loaded as mmCIF in the viewer; B-factor coloring was applied to PDBs for other entries. If needed, we can export CIF with B-factors or split chains to ensure viewer compatibility.
+- ΔH scores reflect sequence conservation within the assembled dataset. Adding/removing isolates will change local ΔH profiles.
+
+Deliverables index
+- Sequences: data/uniprot/*.fasta, data/ncbi/*.fasta
+- Metadata: data/uniprot/*metadata.csv, data/ncbi/*metadata.csv
+- Per-residue conservation: data/conservation/*_deltaH.csv
+- Plots: data/conservation/plots/*.png
+- Ranked features: data/conservation/rankings/*.csv
+- Structures (ΔH mapped to B-factor): data/pdb_colored/*_var.pdb
+- Snapshots: screenshots/*_conservation_snapshot.png
+
+End of file.

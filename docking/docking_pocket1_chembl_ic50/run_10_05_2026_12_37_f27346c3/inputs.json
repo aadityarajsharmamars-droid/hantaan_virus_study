@@ -1,0 +1,31 @@
+{
+    "function": "acedock.apps.acedock.app.main",
+    "slpm_path": "acedock.v1.acedock",
+    "arguments": {
+        "protein": "run_10_05_2026_12_37_f27346c3/6Q99_assembly1_prepared.pdb",
+        "template": "run_10_05_2026_12_37_f27346c3/pocket1_center_template.sdf",
+        "ligands": "run_10_05_2026_12_37_f27346c3/pocket1_ic50_ligands.sdf",
+        "mode": "free",
+        "radius": 9.0,
+        "n_poses": 10,
+        "n_opt": 0,
+        "restraints": null,
+        "rescore_pharma": false,
+        "tether_force": 5.0,
+        "min_tether_radius": 2,
+        "max_tether_radius": 8,
+        "tether_max_trans": 0.0,
+        "tether_max_rot": 0.0,
+        "tether_max_dihedral": 180.0,
+        "tether_penalty_factor": 1.0,
+        "tether_distance_threshold": 0.1,
+        "enforce_bond_type_matching": false,
+        "allow_non_ring_matches": false,
+        "dummy_template": true,
+        "hyperfast_mode": false,
+        "precomputed_grid_as": null,
+        "n_cpus": 1,
+        "outdir": ".",
+        "scratchdir": "./scratch"
+    }
+}

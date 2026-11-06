@@ -1,0 +1,1 @@
+{"systems": [{"name": "output.cube", "type": "volume", "files": ["output.cube"], "volumeRepresentation": {"currentIsoValue": 0.5}}, {"name": "output.pdb", "files": ["output.pdb"]}], "tables": [{"path": "output.csv", "options": {"onRowClick": [{"action": "focusCoords", "column": ["centers"]}]}}]}

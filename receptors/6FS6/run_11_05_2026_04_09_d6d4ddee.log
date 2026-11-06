@@ -1,0 +1,109 @@
+2026-05-11 04:09:52,429 - moleculekit.tools.preparation - WARNING - Both chains and segments are defined in Molecule.chain / Molecule.segid, however they are inconsistent. Protein preparation will use the chain information.
+2026-05-11 04:10:08,640 - moleculekit.tools.preparation - WARNING - The following residues have not been optimized: E4Z, MN
+2026-05-11 04:10:09,216 - numexpr.utils - INFO - Note: NumExpr detected 48 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2026-05-11 04:10:09,216 - numexpr.utils - INFO - NumExpr defaulting to 16 threads.
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue HIS    41 A to HIE
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue HIS    74 A to HIE
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue HIS   128 A to HID
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue LYS   134 A to LYN
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue HIS   144 A to HIE
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue HIS   146 A to HIE
+2026-05-11 04:10:10,444 - moleculekit.tools.preparation - INFO - Modified residue HIS    41 B to HIE
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS    74 B to HID
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS   128 B to HID
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue LYS   134 B to LYN
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS   144 B to HIE
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS   146 B to HIE
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS    41 C to HIE
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS    74 C to HIE
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS   128 C to HID
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue LYS   134 C to LYN
+2026-05-11 04:10:10,445 - moleculekit.tools.preparation - INFO - Modified residue HIS   144 C to HIE
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS   146 C to HIE
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS    41 D to HIE
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS    74 D to HID
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS   128 D to HID
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue LYS   134 D to LYN
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS   144 D to HIE
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS   146 D to HIE
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS    41 E to HIE
+2026-05-11 04:10:10,446 - moleculekit.tools.preparation - INFO - Modified residue HIS    74 E to HID
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS   128 E to HID
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue LYS   134 E to LYN
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS   144 E to HIE
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS   146 E to HIE
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS    41 F to HIE
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS    74 F to HID
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS   128 F to HID
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue LYS   134 F to LYN
+2026-05-11 04:10:10,447 - moleculekit.tools.preparation - INFO - Modified residue HIS   144 F to HIE
+2026-05-11 04:10:10,448 - moleculekit.tools.preparation - INFO - Modified residue HIS   146 F to HIE
+2026-05-11 04:10:10,651 - matplotlib - WARNING - mkdir -p failed for path /app/.config/matplotlib: [Errno 13] Permission denied: '/app/.config'
+2026-05-11 04:10:10,652 - matplotlib - WARNING - Matplotlib created a temporary cache directory at /tmp/matplotlib-54y3r1wf because there was an issue with the default path (/app/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/app/.pixi/envs/base/var/cache/fontconfig
+	/app/.cache/fontconfig
+	/app/.fontconfig
+2026-05-11 04:10:10,895 - matplotlib.font_manager - INFO - generated new fontManager
+2026-05-11 04:10:22,475 - moleculekit.tools.preparation - WARNING - Dubious protonation state: the pKa of 23 residues is within 1.0 units of pH 7.2.
+2026-05-11 04:10:22,475 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    74 A (pKa= 7.09)
+2026-05-11 04:10:22,475 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   128 A (pKa= 6.49)
+2026-05-11 04:10:22,475 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    GLU   198 A (pKa= 6.52)
+2026-05-11 04:10:22,475 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    74 B (pKa= 6.46)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   128 B (pKa= 6.49)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    GLU   198 B (pKa= 6.49)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    74 C (pKa= 7.10)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   128 C (pKa= 6.47)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    GLU   198 C (pKa= 6.43)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    74 D (pKa= 6.44)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   128 D (pKa= 6.90)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    GLU   198 D (pKa= 6.22)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    74 E (pKa= 6.40)
+2026-05-11 04:10:22,476 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   128 E (pKa= 6.51)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    GLU   198 E (pKa= 6.37)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    74 F (pKa= 6.45)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   128 F (pKa= 6.94)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    GLU   198 F (pKa= 6.39)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    E4Z   903 B (pKa= 6.21)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    E4Z   903 C (pKa= 6.68)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    E4Z   903 D (pKa= 6.77)
+2026-05-11 04:10:22,477 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    E4Z   903 E (pKa= 6.26)
+2026-05-11 04:10:22,478 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    E4Z   903 F (pKa= 6.87)
+
+---- Molecule chain report ----
+Chain A:
+    First residue: MET    -1  
+    Final residue: HOH  1036  
+Chain B:
+    First residue: MET    -1  
+    Final residue: HOH  1033  
+Chain C:
+    First residue: MET    -1  
+    Final residue: HOH  1038  
+Chain D:
+    First residue: MET    -1  
+    Final residue: HOH  1039  
+Chain E:
+    First residue: MET    -1  
+    Final residue: HOH  1031  
+Chain F:
+    First residue: ALA     0  
+    Final residue: HOH  1020  
+---- End of chain report ----
+
+Checking licence for ProteinPrepare 1
+# Licence:
+#   Product: ProteinPrepare 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /app/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /app/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid

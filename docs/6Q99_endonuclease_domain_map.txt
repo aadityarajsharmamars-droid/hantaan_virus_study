@@ -1,0 +1,23 @@
+Structure: 6Q99_assembly1.pdb (Andes orthohantavirus L endonuclease)
+Chain: A
+
+Domain coloring and selections used in the viewer
+- N-lobe: residues 1–34; color cyan (#00c8ff); style cartoon
+  Selection: "protein and chain A and resid 1 to 34"
+
+- Catalytic core: residues 35–130; color orange (#ff8c00); style cartoon
+  Selection: "protein and chain A and resid 35 to 130"
+
+- C-lobe: residues 131–199; color magenta (#d500f9); style cartoon
+  Selection: "protein and chain A and resid 131 to 199"
+
+- Pocket-lining residues near top site: residues 112–114; color red (#ff4d4d); style thin licorice
+  Selection: "chain A and resid 112 to 114 and noh"
+
+- Metals: Mn2+ in active site; color green (#2ecc71); style spheres
+  Selection: "resname MN3 or name MN" (in this PDB: A 301–302)
+
+Notes
+- Residue numbering is PDB numbering for chain A after removing negative indices.
+- Pocket centers originated from DeepSite analysis (see deepsite_6Q99/output.csv). The top center is at [171.08, 155.54, 97.44].
+- Use these selections to reproduce the subdomain map and overlays in the viewer.

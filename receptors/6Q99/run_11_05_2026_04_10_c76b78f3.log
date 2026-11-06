@@ -1,0 +1,45 @@
+2026-05-11 04:10:32,563 - moleculekit.tools.preparation - WARNING - Both chains and segments are defined in Molecule.chain / Molecule.segid, however they are inconsistent. Protein preparation will use the chain information.
+2026-05-11 04:10:34,375 - moleculekit.tools.preparation - WARNING - The following residues have not been optimized: GOL, MN3
+2026-05-11 04:10:34,620 - numexpr.utils - INFO - Note: NumExpr detected 48 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2026-05-11 04:10:34,620 - numexpr.utils - INFO - NumExpr defaulting to 16 threads.
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue HIS     8 A to HID
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue HIS    36 A to HIP
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue HIS    45 A to HID
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue GLU   110 A to GLH
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue HIS   137 A to HID
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue HIS   183 A to HID
+2026-05-11 04:10:35,201 - moleculekit.tools.preparation - INFO - Modified residue HIS   197 A to HID
+2026-05-11 04:10:35,348 - matplotlib - WARNING - mkdir -p failed for path /app/.config/matplotlib: [Errno 13] Permission denied: '/app/.config'
+2026-05-11 04:10:35,348 - matplotlib - WARNING - Matplotlib created a temporary cache directory at /tmp/matplotlib-u5_dz3ng because there was an issue with the default path (/app/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/app/.pixi/envs/base/var/cache/fontconfig
+	/app/.cache/fontconfig
+	/app/.fontconfig
+2026-05-11 04:10:35,655 - matplotlib.font_manager - INFO - generated new fontManager
+2026-05-11 04:10:37,781 - moleculekit.tools.preparation - WARNING - Dubious protonation state: the pKa of 3 residues is within 1.0 units of pH 7.2.
+2026-05-11 04:10:37,781 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS     8 A (pKa= 6.75)
+2026-05-11 04:10:37,781 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS    45 A (pKa= 6.25)
+2026-05-11 04:10:37,781 - moleculekit.tools.preparation - WARNING - Dubious protonation state:    HIS   137 A (pKa= 6.43)
+
+---- Molecule chain report ----
+Chain A:
+    First residue: GLY    -1  
+    Final residue: HOH   405  
+---- End of chain report ----
+
+Checking licence for ProteinPrepare 1
+# Licence:
+#   Product: ProteinPrepare 1
+#   Check floating licence:
+#     ACELLERA_LICENCE_SERVER (27000@host.docker.internal) -- GRANTED
+#     ACELLERA_LICENSE_SERVER -- not defined
+#   Check node-locked licence:
+#     ACELLERA_LICENCE_FILE -- not defined
+#     ACELLERA_LICENSE_FILE -- not defined
+#     /opt/acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /opt/acellera/license.dat -- DENIED (Unable to locate target file)
+#     /app/.acellera/licence.dat -- DENIED (Unable to locate target file)
+#     /app/.acellera/license.dat -- DENIED (Unable to locate target file)
+#
+Licence is valid

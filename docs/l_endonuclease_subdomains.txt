@@ -1,0 +1,24 @@
+L endonuclease (6Q99) – subdomain mapping used in the viewer
+
+Protein: Andes orthohantavirus L (Q9E005)
+Structure: 6Q99_assembly1_var.pdb (N‑terminal endonuclease domain; chain A, resid −1..199)
+
+Operational subdomains for visualization (structure-based segmentation of 6Q99)
+- N‑lobe (cyan overlay): resid −1 to 34
+  • Helical/loop elements adjacent to the active site entrance
+  • Likely contributes to shaping the RNA channel
+- Catalytic core (orange overlay): resid 35 to 130
+  • Central β‑sheet and surrounding loops hosting the two‑metal active site
+  • Includes experimentally validated catalytic/functional residues (e.g., 35, 36, 40, 43, 44, 50, 96–98, 110, 124, 127)
+- C‑lobe (magenta overlay): resid 131 to 199
+  • C‑terminal helices; forms the opposite wall of the RNA groove; may stabilize primer positioning
+
+Notes
+- These ranges are chosen to partition the 6Q99 construct into compact structural lobes around the catalytic center for mapping/communication. They are approximate and do not imply separate evolutionary domains.
+- The metal-binding region is shown as green spheres (metals) and green sticks (coordinating residues within 5 Å).
+- Blue/red base coloring remains ΔH‑based conservation: blue conserved, red variable.
+
+Files
+- Viewer overlays were added with semi‑transparent Putty representations per residue range.
+- Conservation tables: data/conservation/L_deltaH.csv
+- Domain/catalytic mapping summary: docs/l_endonuclease_domain_mapping.txt

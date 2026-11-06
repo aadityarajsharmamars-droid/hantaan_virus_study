@@ -1,0 +1,10 @@
+Type-overlap score: 0.300 (1.0 identical by type counts)
+Feature count differences (2 - 1):
+  ACC: 2 vs 2 (diff 0)
+  DON: 5 vs 0 (diff 5)
+  HPH: 1 vs 1 (diff 0)
+  NEG: 0 vs 1 (diff -1)
+  POS: 1 vs 0 (diff 1)
+
+Flags: POS/NEG/MET presence
+{'n_features_1': 4, 'n_features_2': 9, 'has_POS_1': False, 'has_POS_2': True, 'has_NEG_1': True, 'has_NEG_2': False, 'has_MET_1': False, 'has_MET_2': False}

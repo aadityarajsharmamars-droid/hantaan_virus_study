@@ -1,0 +1,29 @@
+L endonuclease (Andes orthohantavirus) – domain mapping on 6Q99
+
+Structure: 6Q99_assembly1_var.pdb (chain A)
+Protein: L (RdRp) – N-terminal endonuclease domain
+UniProt: Q9E005 (length 2153 aa)
+
+Domain assignment
+- Endonuclease domain: resides at the N-terminus of L and corresponds to the entire 6Q99 construct.
+  * UniProt positional context: ~1–200 (explicit range not provided as a 'Domain' feature; supported by literature and mutagenesis annotations for endonuclease function within 1–~190).
+  * PDB residue coverage (6Q99 chain A): resid -1 to 199 (201 residues in model).
+
+Catalytic and functionally validated positions (UniProt annotations → PDB resid)
+- Active site (endonuclease): UniProt 124 → PDB resid 124
+- Mutagenesis (effect on cap‑snatching endonuclease activity):
+  * Almost complete loss: 35→35, 124→124
+  * Complete loss: 36→36, 97→97, 110→110
+  * 80% loss: 40→40
+  * 70% loss: 43→43
+  * 60% loss: 44→44, 98→98
+  * Strongly reduced: 50→50, 96→96
+  * No effect: 167→167
+
+Metal-binding region
+- Two‑metal catalytic center (Mn2+ preferred, Mg2+ possible). In the viewer, the metal ion(s) are shown as green spheres and coordinating residues within 5 Å as green sticks.
+
+Notes
+- Residue numbering in 6Q99 begins at resid -1, 0, then 1…; mapping above uses PDB 'resid' numbers.
+- The complete L protein also contains the central RdRp core and C‑terminal modules; they are not present in 6Q99.
+- For sequence conservation per residue, see data/conservation/L_deltaH.csv and plots in data/conservation/plots/L_deltaH.png.
